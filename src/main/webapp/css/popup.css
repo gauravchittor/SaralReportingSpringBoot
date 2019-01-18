@@ -1,0 +1,90 @@
+  img {
+        max-width: 100%;
+    }
+    .well {
+        /* drop-shadow is better than box-shadow as it add a shadow to tooltip arrows arrow as well,
+        however drop-shadow dramatically affects the performance of transition animation on Android. */
+        /* filter: drop-shadow(0 0 10px rgba(0,0,0,0.3)); */
+        display:none;
+        margin:1em;
+        max-width: 740px;
+    }
+    .well .popup_close {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        border-radius: 2px;
+        background: none;
+        border: 0;
+        font-size: 25px;
+        padding: 0 10px;
+    }
+    pre.prettyprint {
+        padding: 9px 14px;
+    }
+    pre {
+      font-size: 12px;
+    }
+    .fulltable {
+        max-width: 100%;
+        overflow: auto;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .lineheight {
+        line-height: 3em;
+    }
+    
+    .pagebottom {
+      border-top:  1px solid #eaeaea;
+      padding: 20px 0;
+      margin-top: 20px;
+    }
+    .page-header {
+        border-bottom: none;
+    }
+    .page-header .btn-lg {
+        margin-bottom: 10px;
+    }
+    .initialism {
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+
+    /**
+     * Styles for the `tooltip` option
+     */
+
+    .well--tooltip {
+        min-width: 300px;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    @media (min-width: 500px) {
+        .well--tooltip {
+            max-width: 380px;
+        }
+    }
+
+    /* Tooltip Arrow */
+    .well--tooltip::before,
+    .well--tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -14px;
+        width: 0;
+        height: 0;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 14px solid #cccccc;
+    }
+    .well--tooltip::after {
+        border-top-color: #f5f5f5;
+        margin-top:  -1px;
+    }

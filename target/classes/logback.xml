@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+<timestamp key="timestamp-by-second" datePattern="yyyyMMdd"/>
+	<appender name="FileAppender" class="ch.qos.logback.core.FileAppender">
+		<file>e:/JIP/Log_${timestamp-by-second}.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] - %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<appender name="RollingAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>e:/ApplicationRolling.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] - %msg%n</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>e:/JIP/ApplicationRolling_%d{dd-MM-yyyy}.log</fileNamePattern>
+			<maxHistory>10</maxHistory>
+			<totalSizeCap>10KB</totalSizeCap>
+		</rollingPolicy>
+	</appender>
+
+	<!-- Logging custom package -->
+	<logger name="com.saral.reporting" level="info" additivity="false">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+		<appender-ref ref="FileAppender"></appender-ref>
+		<appender-ref ref="RollingAppender"></appender-ref>
+	</logger>
+
+	<!-- Logging spring boot package -->
+	<logger name="org.springframework.boot" level="info" additivity="false">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+		<appender-ref ref="FileAppender"></appender-ref>
+		<appender-ref ref="RollingAppender"></appender-ref>
+	</logger>
+
+
+	<root level="info">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+		<appender-ref ref="RollingAppender"></appender-ref>
+	</root>
+</configuration>

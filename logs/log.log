@@ -1,0 +1,1025 @@
+2019-01-07 10:51:05.358 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletConfigInitParams' with lowest search precedence
+2019-01-07 10:51:05.358 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'servletContextInitParams' with lowest search precedence
+2019-01-07 10:51:05.370 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemProperties' with lowest search precedence
+2019-01-07 10:51:05.370 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'systemEnvironment' with lowest search precedence
+2019-01-07 10:51:05.370 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Initialized StandardServletEnvironment with PropertySources [StubPropertySource {name='servletConfigInitParams'}, StubPropertySource {name='servletContextInitParams'}, MapPropertySource {name='systemProperties'}, SystemEnvironmentPropertySource {name='systemEnvironment'}]
+2019-01-07 10:51:05.407  INFO 95596 --- [main] c.s.r.SpringJpaPostgreSqlApplication     : Starting SpringJpaPostgreSqlApplication on Gaurav with PID 95596 (F:\EclipseWS\Saral\SpringSaral-master\target\classes started by hp in F:\EclipseWS\Saral\SpringSaral-master)
+2019-01-07 10:51:05.409  INFO 95596 --- [main] c.s.r.SpringJpaPostgreSqlApplication     : No active profile set, falling back to default profiles: default
+2019-01-07 10:51:05.448  INFO 95596 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 10:51:06.431 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'applicationConfig: [classpath:/application.properties]' with search precedence immediately lower than 'applicationConfigurationProperties'
+2019-01-07 10:51:06.432 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'applicationConfigurationProperties'
+2019-01-07 10:51:06.432 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Removing PropertySource 'defaultProperties'
+2019-01-07 10:51:07.154  INFO 95596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8082 (http)
+2019-01-07 10:51:07.173  INFO 95596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-07 10:51:07.174  INFO 95596 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.20
+2019-01-07 10:51:07.524  INFO 95596 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-01-07 10:51:07.529  INFO 95596 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-07 10:51:07.530 DEBUG 95596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2019-01-07 10:51:07.530  INFO 95596 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2083 ms
+2019-01-07 10:51:07.611  INFO 95596 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-01-07 10:51:07.626  INFO 95596 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-07 10:51:07.648 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Replacing PropertySource 'servletContextInitParams' with 'servletContextInitParams'
+2019-01-07 10:51:09.044  INFO 95596 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2019-01-07 10:51:09.065  INFO 95596 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-01-07 10:51:09.192  INFO 95596 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2019-01-07 10:51:09.200  INFO 95596 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-01-07 10:51:09.201  INFO 95596 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2019-01-07 10:51:09.259  INFO 95596 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-01-07 10:51:09.384 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@bdd2027
+2019-01-07 10:51:09.384 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@bdd2027
+2019-01-07 10:51:09.388 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@bdd2027
+2019-01-07 10:51:09.389 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@71f96dfb
+2019-01-07 10:51:09.391 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@4315e9af
+2019-01-07 10:51:09.392 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@2babf189
+2019-01-07 10:51:09.395 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@c3177d5
+2019-01-07 10:51:09.396 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@c3177d5
+2019-01-07 10:51:09.396 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@c3177d5
+2019-01-07 10:51:09.398 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@243f003c
+2019-01-07 10:51:09.400 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@243f003c
+2019-01-07 10:51:09.400 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@243f003c
+2019-01-07 10:51:09.403 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@53dad875
+2019-01-07 10:51:09.403 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@53dad875
+2019-01-07 10:51:09.403 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@53dad875
+2019-01-07 10:51:09.405 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@34819867
+2019-01-07 10:51:09.406 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@34819867
+2019-01-07 10:51:09.406 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@34819867
+2019-01-07 10:51:09.407 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@6d2dc9d2
+2019-01-07 10:51:09.408 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@6d2dc9d2
+2019-01-07 10:51:09.408 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@6d2dc9d2
+2019-01-07 10:51:09.410 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@41fed14f
+2019-01-07 10:51:09.411 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@41fed14f
+2019-01-07 10:51:09.411 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@41fed14f
+2019-01-07 10:51:09.413 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@7e736350
+2019-01-07 10:51:09.413 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@7e736350
+2019-01-07 10:51:09.414 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7e736350
+2019-01-07 10:51:09.416 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6940f685
+2019-01-07 10:51:09.417 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6940f685
+2019-01-07 10:51:09.418 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@3402b4c9
+2019-01-07 10:51:09.420 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@3402b4c9
+2019-01-07 10:51:09.422 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@43a51d00
+2019-01-07 10:51:09.422 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@43a51d00
+2019-01-07 10:51:09.423 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7ee3d262
+2019-01-07 10:51:09.426 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@e48bf9a
+2019-01-07 10:51:09.427 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@373f7450
+2019-01-07 10:51:09.427 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@373f7450
+2019-01-07 10:51:09.429 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@64fc097e
+2019-01-07 10:51:09.430 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@64fc097e
+2019-01-07 10:51:09.432 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@4aaae508
+2019-01-07 10:51:09.433 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@4aaae508
+2019-01-07 10:51:09.435 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@cb03411
+2019-01-07 10:51:09.435 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@cb03411
+2019-01-07 10:51:09.435 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@cb03411
+2019-01-07 10:51:09.437 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@63bde6c2
+2019-01-07 10:51:09.439 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@7026b7ee
+2019-01-07 10:51:09.439 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@7026b7ee
+2019-01-07 10:51:09.439 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@7026b7ee
+2019-01-07 10:51:09.440 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@713064e8
+2019-01-07 10:51:09.442 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@3e5d4f6b
+2019-01-07 10:51:09.442 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@3e5d4f6b
+2019-01-07 10:51:09.444 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@fca387
+2019-01-07 10:51:09.445 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@fca387
+2019-01-07 10:51:09.446 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@4c48fe92
+2019-01-07 10:51:09.447 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4c48fe92
+2019-01-07 10:51:09.448 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@213c3543
+2019-01-07 10:51:09.449 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@213c3543
+2019-01-07 10:51:09.450 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@41f4fe5
+2019-01-07 10:51:09.451 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@41f4fe5
+2019-01-07 10:51:09.452 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@11d4dbd6
+2019-01-07 10:51:09.454 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@3ec2ecea
+2019-01-07 10:51:09.454 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@3ec2ecea
+2019-01-07 10:51:09.454 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@3ec2ecea
+2019-01-07 10:51:09.455 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@624a24f6
+2019-01-07 10:51:09.456 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@624a24f6
+2019-01-07 10:51:09.456 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@624a24f6
+2019-01-07 10:51:09.457 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@7afbf561
+2019-01-07 10:51:09.458 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@221dad51
+2019-01-07 10:51:09.460 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@240f6c41
+2019-01-07 10:51:09.461 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@240f6c41
+2019-01-07 10:51:09.461 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@240f6c41
+2019-01-07 10:51:09.463 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@1c758545
+2019-01-07 10:51:09.463 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@1c758545
+2019-01-07 10:51:09.463 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@1c758545
+2019-01-07 10:51:09.464 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@21d1b321
+2019-01-07 10:51:09.464 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@4016ccc1
+2019-01-07 10:51:09.468 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@67d86804
+2019-01-07 10:51:09.469 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@67d86804
+2019-01-07 10:51:09.470 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@4b1a43d8
+2019-01-07 10:51:09.474 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@45e22def
+2019-01-07 10:51:09.475 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@45e22def
+2019-01-07 10:51:09.477 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@23382f76
+2019-01-07 10:51:09.480 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@23382f76
+2019-01-07 10:51:09.480 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@554cd74a
+2019-01-07 10:51:09.481 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@367d2816
+2019-01-07 10:51:09.484 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@27a97e08
+2019-01-07 10:51:09.485 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@28e19366
+2019-01-07 10:51:09.485 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@28e19366
+2019-01-07 10:51:09.488 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@244e619a
+2019-01-07 10:51:09.488 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@10acd6
+2019-01-07 10:51:09.488 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@61dde151
+2019-01-07 10:51:09.488 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@b25b095
+2019-01-07 10:51:09.488 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5cb042da
+2019-01-07 10:51:09.489 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@59c33386
+2019-01-07 10:51:09.489 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@571a9686
+2019-01-07 10:51:09.489 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@719d35e8
+2019-01-07 10:51:09.511  INFO 95596 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-01-07 10:51:09.799  INFO 95596 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2019-01-07 10:51:09.802 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@102ecc22
+2019-01-07 10:51:09.802 DEBUG 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@102ecc22
+2019-01-07 10:51:09.802  INFO 95596 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@41f4fe5
+2019-01-07 10:51:09.981  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:09.983  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:09.983  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:09.984  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:09.984  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:09.984  WARN 95596 --- [main] org.hibernate.orm.deprecation            : HHH90000014: Found use of deprecated [org.hibernate.id.SequenceGenerator] sequence-based id generator; use org.hibernate.id.enhanced.SequenceStyleGenerator instead.  See Hibernate Domain Model Mapping Guide for details.
+2019-01-07 10:51:10.046 TRACE 95596 --- [main] org.hibernate.type.TypeFactory           : Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@52d6d273
+2019-01-07 10:51:10.435  INFO 95596 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2019-01-07 10:51:11.171  INFO 95596 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-01-07 10:51:11.369 DEBUG 95596 --- [main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=true]
+2019-01-07 10:51:11.376  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.376  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.383  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.392  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.413  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.452  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.506  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.515  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.517  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.524  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.543  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.556  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.557  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.602  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.603  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.604  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.614  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.616  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.616  INFO 95596 --- [main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:11.699 DEBUG 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking for request mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 10:51:11.714 DEBUG 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 request handler methods found on class com.saral.reporting.controller.LoginController: {public org.springframework.http.ResponseEntity com.saral.reporting.controller.LoginController.showDesignReport(org.springframework.ui.ModelMap,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException={[/DesignReport],methods=[GET],produces=[application/json]}, public java.lang.String com.saral.reporting.controller.LoginController.showWelcomePage(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)={[/login || /],methods=[POST]}, public java.lang.String com.saral.reporting.controller.LoginController.showLoginPage(org.springframework.ui.ModelMap)={[/login || /],methods=[GET]}, public org.springframework.http.ResponseEntity com.saral.reporting.controller.LoginController.showDesignReportCol(org.springframework.ui.ModelMap,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException={[/DesignReportCol],methods=[POST],produces=[application/json]}, public org.springframework.http.ResponseEntity com.saral.reporting.controller.LoginController.saveDesignerReport(javax.servlet.http.HttpServletRequest)={[/SaveReport],methods=[POST],produces=[application/json]}}
+2019-01-07 10:51:11.716  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/DesignReport],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.saral.reporting.controller.LoginController.showDesignReport(org.springframework.ui.ModelMap,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException
+2019-01-07 10:51:11.716  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /],methods=[POST]}" onto public java.lang.String com.saral.reporting.controller.LoginController.showWelcomePage(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+2019-01-07 10:51:11.717  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login || /],methods=[GET]}" onto public java.lang.String com.saral.reporting.controller.LoginController.showLoginPage(org.springframework.ui.ModelMap)
+2019-01-07 10:51:11.717  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/DesignReportCol],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.saral.reporting.controller.LoginController.showDesignReportCol(org.springframework.ui.ModelMap,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest) throws javax.servlet.ServletException,java.io.IOException
+2019-01-07 10:51:11.718  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/SaveReport],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> com.saral.reporting.controller.LoginController.saveDesignerReport(javax.servlet.http.HttpServletRequest)
+2019-01-07 10:51:11.724 DEBUG 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 request handler methods found on class org.springframework.boot.autoconfigure.web.BasicErrorController: {public org.springframework.http.ResponseEntity org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)={[/error]}, public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)={[/error],produces=[text/html]}}
+2019-01-07 10:51:11.725  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-01-07 10:51:11.725  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-01-07 10:51:11.746 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Looking for URL mappings in application context: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalRequiredAnnotationProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalCommonAnnotationProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.event.internalEventListenerProcessor': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.event.internalEventListenerFactory': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springJpaPostgreSqlApplication': no URL paths identified
+2019-01-07 10:51:11.748 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'appConfig': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'loginController': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'loginDAO': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'attributeMasterDataServiceImpl': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'loginServiceImpl': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'reportBeanServiceImpl': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'reportSelectColumnServiceImpl': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'serviceMasterImpl': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'requestMappingHandlerMapping': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcPathMatcher': no URL paths identified
+2019-01-07 10:51:11.749 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcUrlPathHelper': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcContentNegotiationManager': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'viewControllerHandlerMapping': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'beanNameHandlerMapping': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'resourceHandlerMapping': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcResourceUrlProvider': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'defaultServletHandlerMapping': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'requestMappingHandlerAdapter': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcConversionService': no URL paths identified
+2019-01-07 10:51:11.750 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcValidator': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcUriComponentsContributor': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'httpRequestHandlerAdapter': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'simpleControllerHandlerAdapter': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'handlerExceptionResolver': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mvcViewResolver': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tilesConfigurer': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.AutoConfigurationPackages': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.condition.BeanTypeRegistry': no URL paths identified
+2019-01-07 10:51:11.751 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'propertySourcesPlaceholderConfigurer': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'standardJacksonObjectMapperBuilderCustomizer': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.store': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonObjectMapperBuilder': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonObjectMapper': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jsonComponentModule': no URL paths identified
+2019-01-07 10:51:11.752 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration$TomcatWebSocketConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'websocketContainerCustomizer': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration$EmbeddedTomcat': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatEmbeddedServletContainerFactory': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.EmbeddedServletContainerAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'embeddedServletContainerCustomizerBeanPostProcessor': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorPageRegistrarBeanPostProcessor': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dispatcherServlet': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.mvc-org.springframework.boot.autoconfigure.web.WebMvcProperties': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dispatcherServletRegistration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'defaultValidator': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'methodValidationPostProcessor': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'error': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'beanNameViewResolver': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'conventionErrorViewResolver': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.753 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorAttributes': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'basicErrorController': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'errorPageCustomizer': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'preserveErrorControllerTargetClassPostProcessor': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mbeanExporter': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'objectNamingStrategy': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mbeanServer': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springApplicationAdminRegistrar': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$JdkDynamicAutoProxyConfiguration': no URL paths identified
+2019-01-07 10:51:11.754 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.aop.config.internalAutoProxyCreator': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.aop.AopAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.jta.JtaAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jta-org.springframework.boot.autoconfigure.transaction.jta.JtaProperties': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSource': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$PooledDataSourceConfiguration': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration$TomcatDataSourcePoolMetadataProviderConfiguration': no URL paths identified
+2019-01-07 10:51:11.755 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'tomcatPoolDataSourceMetadataProvider': no URL paths identified
+2019-01-07 10:51:11.756 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.metadata.DataSourcePoolMetadataProvidersConfiguration': no URL paths identified
+2019-01-07 10:51:11.756 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSourceInitializer': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSourceInitializerPostProcessor': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'openEntityManagerInViewInterceptor': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionManager': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaVendorAdapter': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'entityManagerFactoryBuilder': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'entityManagerFactory': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'dataSourceInitializedPublisher': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.757 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'persistenceExceptionTranslationPostProcessor': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'emBeanDefinitionRegistrarPostProcessor': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaMappingContext': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jpaContext': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'serviceMasterRepository': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'reportBeanRepository': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'reportSelectColumnRepository': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'loginRepository': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'attributeMasterDataRepository': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.758 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'gson': no URL paths identified
+2019-01-07 10:51:11.759 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration': no URL paths identified
+2019-01-07 10:51:11.759 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'stringHttpMessageConverter': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.http.encoding-org.springframework.boot.autoconfigure.web.HttpEncodingProperties': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'mappingJackson2HttpMessageConverter': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.JacksonHttpMessageConvertersConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.GsonHttpMessageConvertersConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpMessageConvertersAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'messageConverters': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.data.web.config.SpringDataWebConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'pageableResolver': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'sortResolver': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.data.web.config.SpringDataJacksonConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jacksonGeoModule': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration$DataSourceTransactionManagerConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'jdbcTemplate': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'namedParameterJdbcTemplate': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.config.internalTransactionAdvisor': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionAttributeSource': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionInterceptor': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.transaction.config.internalTransactionalEventListenerFactory': no URL paths identified
+2019-01-07 10:51:11.760 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration$CglibAutoProxyConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$EnableTransactionManagementConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$TransactionTemplateConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'transactionTemplate': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'platformTransactionManagerCustomizers': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.HttpEncodingAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'characterEncodingFilter': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'localeCharsetMappingsCustomizer': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'multipartConfigElement': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'multipartResolver': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'spring.http.multipart-org.springframework.boot.autoconfigure.web.MultipartProperties': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.ServerPropertiesAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'serverProperties': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'duplicateServerPropertiesDetector': no URL paths identified
+2019-01-07 10:51:11.761 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration$RestTemplateConfiguration': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'restTemplateBuilder': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.boot.autoconfigure.web.WebClientAutoConfiguration': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.orm.jpa.SharedEntityManagerCreator#0': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'autoConfigurationReport': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springApplicationArguments': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springBootBanner': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'springBootLoggingSystem': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'environment': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'systemProperties': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'systemEnvironment': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importRegistry': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'messageSource': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'applicationEventMulticaster': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'servletContext': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'contextParameters': no URL paths identified
+2019-01-07 10:51:11.762 DEBUG 95596 --- [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Rejected bean name 'contextAttributes': no URL paths identified
+2019-01-07 10:51:11.781  INFO 95596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/assets/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-07 10:51:11.781  INFO 95596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/ckeditor/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-07 10:51:11.781  INFO 95596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/js/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-07 10:51:11.781  INFO 95596 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/css/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-01-07 10:51:11.828  INFO 95596 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 10:51:11.874 DEBUG 95596 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Looking for exception mappings: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 10:51:11.960  INFO 95596 --- [main] org.apache.tiles.access.TilesAccess      : Publishing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2019-01-07 10:51:12.460  INFO 95596 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-01-07 10:51:12.477 DEBUG 95596 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Looking for resource handler mappings
+2019-01-07 10:51:12.479 DEBUG 95596 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/assets/**", locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]
+2019-01-07 10:51:12.479 DEBUG 95596 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/ckeditor/**", locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]
+2019-01-07 10:51:12.479 DEBUG 95596 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/js/**", locations=[ServletContext resource [/js/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@394a6d2b]
+2019-01-07 10:51:12.480 DEBUG 95596 --- [main] o.s.w.s.resource.ResourceUrlProvider     : Found resource handler mapping: URL pattern="/css/**", locations=[ServletContext resource [/css/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@635ff2a5]
+2019-01-07 10:51:12.548  INFO 95596 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8082 (http)
+2019-01-07 10:51:12.554 DEBUG 95596 --- [main] o.s.w.c.s.StandardServletEnvironment     : Adding PropertySource 'server.ports' with highest search precedence
+2019-01-07 10:51:12.557  INFO 95596 --- [main] c.s.r.SpringJpaPostgreSqlApplication     : Started SpringJpaPostgreSqlApplication in 7.4 seconds (JVM running for 8.399)
+2019-01-07 10:51:24.610 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing servlet 'dispatcherServlet'
+2019-01-07 10:51:24.614  INFO 95596 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-01-07 10:51:24.615  INFO 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-01-07 10:51:24.615 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Using MultipartResolver [org.springframework.web.multipart.support.StandardServletMultipartResolver@640c216b]
+2019-01-07 10:51:24.632 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@7cf0e0d5]
+2019-01-07 10:51:24.649 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Unable to locate ThemeResolver with name 'themeResolver': using default [org.springframework.web.servlet.theme.FixedThemeResolver@3fc20b7f]
+2019-01-07 10:51:24.661 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Unable to locate RequestToViewNameTranslator with name 'viewNameTranslator': using default [org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@a36e301]
+2019-01-07 10:51:24.690 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@1d6755a1]
+2019-01-07 10:51:24.693 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Published WebApplicationContext of servlet 'dispatcherServlet' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.dispatcherServlet]
+2019-01-07 10:51:24.693  INFO 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 78 ms
+2019-01-07 10:51:24.694 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Servlet 'dispatcherServlet' configured successfully
+2019-01-07 10:51:24.720 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/]
+2019-01-07 10:51:24.727 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /
+2019-01-07 10:51:24.732 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public java.lang.String com.saral.reporting.controller.LoginController.showLoginPage(org.springframework.ui.ModelMap)]
+2019-01-07 10:51:24.733 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/] is: -1
+2019-01-07 10:51:24.775 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.servlet.view.BeanNameViewResolver  : No matching bean found for view name 'login'
+2019-01-07 10:51:24.794 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.web.servlet.view.tiles3.TilesView: name 'login'; URL [login]] in DispatcherServlet with name 'dispatcherServlet'
+2019-01-07 10:51:26.331  INFO 95596 --- [http-nio-8082-exec-1] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    839935 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:26.331 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.358 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/css/bootstrap.min.css]
+2019-01-07 10:51:26.358 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/css/bootstrap.min.css
+2019-01-07 10:51:26.363 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/css/bootstrap.min.css]
+2019-01-07 10:51:26.363 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/css/bootstrap.min.css] are [/assets/**]
+2019-01-07 10:51:26.364 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/css/bootstrap.min.css] are {}
+2019-01-07 10:51:26.365 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/css/bootstrap.min.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.366 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/css/bootstrap.min.css] is: -1
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/css/ace.min.css]
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/css/ace.min.css
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/css/ace.min.css]
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/css/ace.min.css] are [/assets/**]
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/css/ace.min.css] are {}
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/css/ace.min.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/css/ace.min.css] is: -1
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/css/ace-skins.min.css]
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/font-awesome/4.5.0/css/font-awesome.min.css]
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/css/ace-skins.min.css
+2019-01-07 10:51:26.375 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/font-awesome/4.5.0/css/font-awesome.min.css
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/css/ace-skins.min.css]
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/font-awesome/4.5.0/css/font-awesome.min.css]
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/font-awesome/4.5.0/css/font-awesome.min.css] are [/assets/**]
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/font-awesome/4.5.0/css/font-awesome.min.css] are {}
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/font-awesome/4.5.0/css/font-awesome.min.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/font-awesome/4.5.0/css/font-awesome.min.css] is: -1
+2019-01-07 10:51:26.379 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/css/ace-skins.min.css] are [/assets/**]
+2019-01-07 10:51:26.381 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/css/ace-skins.min.css] are {}
+2019-01-07 10:51:26.382 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/css/ace-skins.min.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.382 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/css/ace-skins.min.css] is: -1
+2019-01-07 10:51:26.382 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/css/ace-rtl.min.css]
+2019-01-07 10:51:26.386 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/css/ace-rtl.min.css
+2019-01-07 10:51:26.386 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.386 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.390 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/css/ace-rtl.min.css]
+2019-01-07 10:51:26.390 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/css/ace-rtl.min.css] are [/assets/**]
+2019-01-07 10:51:26.391 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/css/ace-rtl.min.css] are {}
+2019-01-07 10:51:26.391 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/css/ace-rtl.min.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.391 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/css/ace-rtl.min.css] is: -1
+2019-01-07 10:51:26.384 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/css/fonts.googleapis.com.css]
+2019-01-07 10:51:26.396 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/css/fonts.googleapis.com.css
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/css/jquery-ui.css]
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /css/jquery-ui.css
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/css/jquery-ui.css]
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/css/jquery-ui.css] are [/css/**]
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/css/jquery-ui.css] are {}
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/css/jquery-ui.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/css/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@635ff2a5]]] and 1 interceptor
+2019-01-07 10:51:26.401 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/css/jquery-ui.css] is: -1
+2019-01-07 10:51:26.405 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/css/fonts.googleapis.com.css]
+2019-01-07 10:51:26.405 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/css/fonts.googleapis.com.css] are [/assets/**]
+2019-01-07 10:51:26.405 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/css/fonts.googleapis.com.css] are {}
+2019-01-07 10:51:26.405 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/css/fonts.googleapis.com.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.405 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/css/fonts.googleapis.com.css] is: -1
+2019-01-07 10:51:26.412 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.412 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.416 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.416 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.421 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/ace-extra.min.js]
+2019-01-07 10:51:26.421 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/ace-extra.min.js
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/ace-extra.min.js]
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/ace-extra.min.js] are [/assets/**]
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/ace-extra.min.js] are {}
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/ace-extra.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.422 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/ace-extra.min.js] is: -1
+2019-01-07 10:51:26.423 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.423 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.425 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.425 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/ckeditor.js]
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/ckeditor.js
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/js/jquery-3.3.1.js]
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /js/jquery-3.3.1.js
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/ckeditor.js]
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/ckeditor.js] are [/ckeditor/**]
+2019-01-07 10:51:26.428 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/ckeditor.js] are {}
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/ckeditor.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/ckeditor.js] is: -1
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/js/jquery-3.3.1.js]
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/js/jquery-3.3.1.js] are [/js/**]
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/js/jquery-3.3.1.js] are {}
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/js/jquery.popupoverlay.js]
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/js/jquery-3.3.1.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/js/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@394a6d2b]]] and 1 interceptor
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /js/jquery.popupoverlay.js
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/js/jquery-3.3.1.js] is: -1
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/js/jquery.popupoverlay.js]
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/js/jquery-ui.js]
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /js/jquery-ui.js
+2019-01-07 10:51:26.432 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/js/jquery.popupoverlay.js] are [/js/**]
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/js/jquery.popupoverlay.js] are {}
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/js/jquery.popupoverlay.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/js/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@394a6d2b]]] and 1 interceptor
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/js/jquery.popupoverlay.js] is: -1
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/js/jquery-ui.js]
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/js/jquery-ui.js] are [/js/**]
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/js/jquery-ui.js] are {}
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/js/jquery-ui.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/js/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@394a6d2b]]] and 1 interceptor
+2019-01-07 10:51:26.434 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/js/jquery-ui.js] is: -1
+2019-01-07 10:51:26.439 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.439 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.444 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/js/jscolor.js]
+2019-01-07 10:51:26.444 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /js/jscolor.js
+2019-01-07 10:51:26.444 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/js/jscolor.js]
+2019-01-07 10:51:26.444 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/js/jscolor.js] are [/js/**]
+2019-01-07 10:51:26.445 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/js/jscolor.js] are {}
+2019-01-07 10:51:26.445 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/js/jscolor.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/js/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@394a6d2b]]] and 1 interceptor
+2019-01-07 10:51:26.445 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/js/jscolor.js] is: -1
+2019-01-07 10:51:26.454 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.454 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.467 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.467 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.467 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.467 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.557 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.557 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.577 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.577 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.702 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.702 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:26.917 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2]
+2019-01-07 10:51:26.917 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2
+2019-01-07 10:51:26.918 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2]
+2019-01-07 10:51:26.918 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2] are [/assets/**]
+2019-01-07 10:51:26.918 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2] are {}
+2019-01-07 10:51:26.918 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:26.918 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/font-awesome/4.5.0/fonts/fontawesome-webfont.woff2] is: -1
+2019-01-07 10:51:26.933 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.cors.DefaultCorsProcessor        : Skip CORS processing: request is from same origin
+2019-01-07 10:51:26.942 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:26.942 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.111 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing POST request for [/]
+2019-01-07 10:51:29.111 DEBUG 95596 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /
+2019-01-07 10:51:29.112 DEBUG 95596 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public java.lang.String com.saral.reporting.controller.LoginController.showWelcomePage(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)]
+2019-01-07 10:51:29.113 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.cors.DefaultCorsProcessor        : Skip CORS processing: request is from same origin
+2019-01-07 10:51:29.136  INFO 95596 --- [http-nio-8082-exec-9] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-01-07 10:51:29.320 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [VARCHAR]) - [HR001057]
+2019-01-07 10:51:29.320 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_1_0_] : [INTEGER]) - [8721247]
+2019-01-07 10:51:29.320 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_2_0_] : [VARCHAR]) - [PANKAJ SHARMA]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_3_0_] : [INTEGER]) - [18]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_4_0_] : [VARCHAR]) - [Department Admin]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_5_0_] : [VARCHAR]) - [Haryana Urban Development Authority]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_6_0_] : [INTEGER]) - [727]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_7_0_] : [INTEGER]) - [2787]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_8_0_] : [VARCHAR]) - [Nodal Officer]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [VARCHAR]) - [HR001057]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_1_0_] : [INTEGER]) - [8721247]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_2_0_] : [VARCHAR]) - [PANKAJ SHARMA]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_3_0_] : [INTEGER]) - [3]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_4_0_] : [VARCHAR]) - [Designated Officer]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_5_0_] : [VARCHAR]) - [Haryana Urban Development Authority]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_6_0_] : [INTEGER]) - [727]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_7_0_] : [INTEGER]) - [2787]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_8_0_] : [VARCHAR]) - [Nodal Officer]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_0_0_] : [VARCHAR]) - [HR001057]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_1_0_] : [INTEGER]) - [8721247]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_2_0_] : [VARCHAR]) - [PANKAJ SHARMA]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_3_0_] : [INTEGER]) - [5]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_4_0_] : [VARCHAR]) - [Work Flow Player]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_5_0_] : [VARCHAR]) - [Haryana Urban Development Authority]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_6_0_] : [INTEGER]) - [727]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_7_0_] : [INTEGER]) - [2787]
+2019-01-07 10:51:29.321 TRACE 95596 --- [http-nio-8082-exec-9] o.h.type.descriptor.sql.BasicExtractor   : extracted value ([col_8_0_] : [VARCHAR]) - [Nodal Officer]
+2019-01-07 10:51:29.321 DEBUG 95596 --- [http-nio-8082-exec-9] o.h.s.internal.ConcurrentStatisticsImpl  : HHH000117: HQL: SELECT loginData.signNo,loginData.userId,loginData.userName, roleAssignment.roleId, roleMaster.roleName, userLocation.departmentLevelName, userLocation.departmentId, userLocationDesignation.designationId,  userLocationDesignation.designationName FROM  RoleAssignment roleAssignment ,LoginData loginData, RoleMaster roleMaster, UserLocation userLocation,UserLocationDesignation userLocationDesignation WHERE (loginData.userId = roleAssignment.userId) AND (roleAssignment.roleId =  roleMaster.roleId) AND (loginData.userId = userLocation.userId) AND (userLocation.userLocId = userLocationDesignation.userLocId) AND loginData.signNo ='HR001057'  AND loginData.passwd= '4de93544234adffbb681ed60ffcfb941' , time: 95ms, rows: 3
+2019-01-07 10:51:29.338 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.w.servlet.view.BeanNameViewResolver  : No matching bean found for view name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Rendering view [org.springframework.web.servlet.view.tiles3.TilesView: name 'welcome'; URL [welcome]] in DispatcherServlet with name 'dispatcherServlet'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'sign_no' of type [java.lang.String] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'user_id' of type [java.lang.Integer] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'user_name' of type [java.lang.String] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'department_level_name' of type [java.lang.String] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'department_id' of type [java.lang.Integer] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'designation_id' of type [java.lang.Integer] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'designation_name' of type [java.lang.String] to request in view with name 'welcome'
+2019-01-07 10:51:29.339 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'hm' of type [java.lang.String] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.sign_no' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.user_id' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.user_name' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.department_level_name' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.department_id' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.designation_id' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.designation_name' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.340 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.view.tiles3.TilesView    : Added model object 'org.springframework.validation.BindingResult.hm' of type [org.springframework.validation.BeanPropertyBindingResult] to request in view with name 'welcome'
+2019-01-07 10:51:29.715  INFO 95596 --- [http-nio-8082-exec-9] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    463340 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5581234 nanoseconds spent preparing 1 JDBC statements;
+    73581102 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    37730 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:29.716 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.751 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/images/avatars/user.jpg]
+2019-01-07 10:51:29.752 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/images/avatars/user.jpg
+2019-01-07 10:51:29.753 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/images/avatars/user.jpg]
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/images/avatars/user.jpg] are [/assets/**]
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/images/avatars/user.jpg] are {}
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/images/avatars/user.jpg] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/bootstrap.min.js]
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/images/avatars/user.jpg] is: -1
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/jquery-2.1.4.min.js]
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/jquery-2.1.4.min.js
+2019-01-07 10:51:29.755 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/jquery-2.1.4.min.js]
+2019-01-07 10:51:29.756 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/jquery-2.1.4.min.js] are [/assets/**]
+2019-01-07 10:51:29.756 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/jquery-2.1.4.min.js] are {}
+2019-01-07 10:51:29.756 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/jquery-2.1.4.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.756 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/jquery-2.1.4.min.js] is: -1
+2019-01-07 10:51:29.754 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/bootstrap.min.js
+2019-01-07 10:51:29.757 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/jquery-ui.custom.min.js]
+2019-01-07 10:51:29.757 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/jquery-ui.custom.min.js
+2019-01-07 10:51:29.759 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/jquery-ui.custom.min.js]
+2019-01-07 10:51:29.759 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/jquery-ui.custom.min.js] are [/assets/**]
+2019-01-07 10:51:29.759 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/jquery-ui.custom.min.js] are {}
+2019-01-07 10:51:29.759 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/jquery-ui.custom.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.758 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/bootstrap.min.js]
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/jquery-ui.custom.min.js] is: -1
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/bootstrap.min.js] are [/assets/**]
+2019-01-07 10:51:29.760 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/jquery.ui.touch-punch.min.js]
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/bootstrap.min.js] are {}
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/jquery.ui.touch-punch.min.js
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/bootstrap.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.766 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/bootstrap.min.js] is: -1
+2019-01-07 10:51:29.767 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/jquery.ui.touch-punch.min.js]
+2019-01-07 10:51:29.767 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/jquery.ui.touch-punch.min.js] are [/assets/**]
+2019-01-07 10:51:29.767 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/jquery.ui.touch-punch.min.js] are {}
+2019-01-07 10:51:29.767 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/jquery.ui.touch-punch.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.767 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/jquery.ui.touch-punch.min.js] is: -1
+2019-01-07 10:51:29.770 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/jquery.easypiechart.min.js]
+2019-01-07 10:51:29.770 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/jquery.easypiechart.min.js
+2019-01-07 10:51:29.771 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/jquery.easypiechart.min.js]
+2019-01-07 10:51:29.771 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/jquery.easypiechart.min.js] are [/assets/**]
+2019-01-07 10:51:29.771 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/jquery.easypiechart.min.js] are {}
+2019-01-07 10:51:29.771 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/jquery.easypiechart.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.771 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/jquery.easypiechart.min.js] is: -1
+2019-01-07 10:51:29.829 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.829 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.835 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/jquery.sparkline.index.min.js]
+2019-01-07 10:51:29.835 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/jquery.sparkline.index.min.js
+2019-01-07 10:51:29.836 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/jquery.sparkline.index.min.js]
+2019-01-07 10:51:29.836 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/jquery.sparkline.index.min.js] are [/assets/**]
+2019-01-07 10:51:29.836 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/jquery.sparkline.index.min.js] are {}
+2019-01-07 10:51:29.836 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/jquery.sparkline.index.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.836 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/jquery.sparkline.index.min.js] is: -1
+2019-01-07 10:51:29.847 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.847 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.857 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/ace-elements.min.js]
+2019-01-07 10:51:29.858 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/ace-elements.min.js
+2019-01-07 10:51:29.858 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/ace-elements.min.js]
+2019-01-07 10:51:29.860 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/ace-elements.min.js] are [/assets/**]
+2019-01-07 10:51:29.860 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/ace-elements.min.js] are {}
+2019-01-07 10:51:29.861 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/ace-elements.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.861 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/ace-elements.min.js] is: -1
+2019-01-07 10:51:29.865 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.865 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.865 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.865 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.873 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/assets/js/ace.min.js]
+2019-01-07 10:51:29.873 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /assets/js/ace.min.js
+2019-01-07 10:51:29.874 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/assets/js/ace.min.js]
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/assets/js/ace.min.js] are [/assets/**]
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/assets/js/ace.min.js] are {}
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/assets/js/ace.min.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/assets/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@582dcd35]]] and 1 interceptor
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/assets/js/ace.min.js] is: -1
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/img/settings-gears.png]
+2019-01-07 10:51:29.875 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /img/settings-gears.png
+2019-01-07 10:51:29.876 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/img/settings-gears.png]
+2019-01-07 10:51:29.876  WARN 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/img/settings-gears.png] in DispatcherServlet with name 'dispatcherServlet'
+2019-01-07 10:51:29.876 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.879 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
+2019-01-07 10:51:29.879 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2019-01-07 10:51:29.883 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-01-07 10:51:29.883 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/error] is: -1
+2019-01-07 10:51:29.912 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.912 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.918 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/img/close.png]
+2019-01-07 10:51:29.918 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /img/close.png
+2019-01-07 10:51:29.929 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/img/close.png]
+2019-01-07 10:51:29.930  WARN 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/img/close.png] in DispatcherServlet with name 'dispatcherServlet'
+2019-01-07 10:51:29.930 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.931 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/error]
+2019-01-07 10:51:29.931 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /error
+2019-01-07 10:51:29.934 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Returning handler method [public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)]
+2019-01-07 10:51:29.934 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/error] is: -1
+2019-01-07 10:51:29.939 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.939 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.949 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.949 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.949 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.949 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.965 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.967 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.976 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Jan 07 10:51:29 IST 2019, status=404, error=Not Found, message=No message available, path=/img/settings-gears.png}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@5a3deace]
+2019-01-07 10:51:29.976 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Written [{timestamp=Mon Jan 07 10:51:29 IST 2019, status=404, error=Not Found, message=No message available, path=/img/close.png}] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@5a3deace]
+2019-01-07 10:51:29.976 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.977  INFO 95596 --- [http-nio-8082-exec-4] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:29.977 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:29.976 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:29.977  INFO 95596 --- [http-nio-8082-exec-2] i.StatisticalLoggingSessionEventListener : Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2019-01-07 10:51:29.977 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.156 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/config.js]
+2019-01-07 10:51:30.157 DEBUG 95596 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/config.js
+2019-01-07 10:51:30.157 DEBUG 95596 --- [http-nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/config.js]
+2019-01-07 10:51:30.157 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/config.js] are [/ckeditor/**]
+2019-01-07 10:51:30.157 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/config.js] are {}
+2019-01-07 10:51:30.157 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/config.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.158 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/config.js] is: -1
+2019-01-07 10:51:30.230 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.230 DEBUG 95596 --- [http-nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.277 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/skins/moono-lisa/editor.css]
+2019-01-07 10:51:30.278 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/skins/moono-lisa/editor.css
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/skins/moono-lisa/editor.css]
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/lang/en.js]
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/skins/moono-lisa/editor.css] are [/ckeditor/**]
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/lang/en.js
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/skins/moono-lisa/editor.css] are {}
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/skins/moono-lisa/editor.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/skins/moono-lisa/editor.css] is: -1
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/lang/en.js]
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/lang/en.js] are [/ckeditor/**]
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/lang/en.js] are {}
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/lang/en.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.279 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/lang/en.js] is: -1
+2019-01-07 10:51:30.334 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.334 DEBUG 95596 --- [http-nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.342 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.345 DEBUG 95596 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.357 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/styles.js]
+2019-01-07 10:51:30.357 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/styles.js
+2019-01-07 10:51:30.360 DEBUG 95596 --- [http-nio-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/styles.js]
+2019-01-07 10:51:30.360 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/styles.js] are [/ckeditor/**]
+2019-01-07 10:51:30.361 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/styles.js] are {}
+2019-01-07 10:51:30.361 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/styles.js] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.361 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/styles.js] is: -1
+2019-01-07 10:51:30.398 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.398 DEBUG 95596 --- [http-nio-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.443 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css]
+2019-01-07 10:51:30.444 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/plugins/scayt/skins/moono-lisa/scayt.css
+2019-01-07 10:51:30.447 DEBUG 95596 --- [http-nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css]
+2019-01-07 10:51:30.447 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css] are [/ckeditor/**]
+2019-01-07 10:51:30.447 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css] are {}
+2019-01-07 10:51:30.447 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.448 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css] is: -1
+2019-01-07 10:51:30.450 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css]
+2019-01-07 10:51:30.450 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/plugins/wsc/skins/moono-lisa/wsc.css
+2019-01-07 10:51:30.455 DEBUG 95596 --- [http-nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css]
+2019-01-07 10:51:30.455 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css] are [/ckeditor/**]
+2019-01-07 10:51:30.455 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css] are {}
+2019-01-07 10:51:30.455 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.455 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css] is: -1
+2019-01-07 10:51:30.457 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/plugins/scayt/dialogs/dialog.css]
+2019-01-07 10:51:30.457 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/plugins/scayt/dialogs/dialog.css
+2019-01-07 10:51:30.460 DEBUG 95596 --- [http-nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/plugins/scayt/dialogs/dialog.css]
+2019-01-07 10:51:30.460 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/plugins/scayt/dialogs/dialog.css] are [/ckeditor/**]
+2019-01-07 10:51:30.460 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/plugins/scayt/dialogs/dialog.css] are {}
+2019-01-07 10:51:30.460 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/plugins/scayt/dialogs/dialog.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.460 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/plugins/scayt/dialogs/dialog.css] is: -1
+2019-01-07 10:51:30.466 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.466 DEBUG 95596 --- [http-nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.472 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/plugins/tableselection/styles/tableselection.css]
+2019-01-07 10:51:30.472 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/plugins/tableselection/styles/tableselection.css
+2019-01-07 10:51:30.474 DEBUG 95596 --- [http-nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/plugins/tableselection/styles/tableselection.css]
+2019-01-07 10:51:30.474 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/plugins/tableselection/styles/tableselection.css] are [/ckeditor/**]
+2019-01-07 10:51:30.475 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/plugins/tableselection/styles/tableselection.css] are {}
+2019-01-07 10:51:30.476 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/plugins/tableselection/styles/tableselection.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.477 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/plugins/tableselection/styles/tableselection.css] is: -1
+2019-01-07 10:51:30.478 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.478 DEBUG 95596 --- [http-nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.486 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.486 DEBUG 95596 --- [http-nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.499 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.499 DEBUG 95596 --- [http-nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/skins/moono-lisa/icons.png]
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/skins/moono-lisa/icons.png
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/skins/moono-lisa/icons.png]
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/skins/moono-lisa/icons.png] are [/ckeditor/**]
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/skins/moono-lisa/icons.png] are {}
+2019-01-07 10:51:30.562 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/skins/moono-lisa/icons.png] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.563 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/skins/moono-lisa/icons.png] is: -1
+2019-01-07 10:51:30.569 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.569 DEBUG 95596 --- [http-nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : DispatcherServlet with name 'dispatcherServlet' processing GET request for [/ckeditor/contents.css]
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Looking up handler method for path /ckeditor/contents.css
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Did not find handler method for [/ckeditor/contents.css]
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Matching patterns for request [/ckeditor/contents.css] are [/ckeditor/**]
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : URI Template variables for request [/ckeditor/contents.css] are {}
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapping [/ckeditor/contents.css] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[ServletContext resource [/ckeditor/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1e6bd263]]] and 1 interceptor
+2019-01-07 10:51:30.601 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Last-Modified value for [/ckeditor/contents.css] is: -1
+2019-01-07 10:51:30.611 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Null ModelAndView returned to DispatcherServlet with name 'dispatcherServlet': assuming HandlerAdapter completed request handling
+2019-01-07 10:51:30.611 DEBUG 95596 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Successfully completed request
+2019-01-07 11:12:45.402  INFO 95596 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-07 11:12:45.402  INFO 95596 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2c34f934: startup date [Mon Jan 07 10:51:05 IST 2019]; root of context hierarchy
+2019-01-07 11:12:45.407  INFO 95596 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-01-07 11:12:45.408  INFO 95596 --- [RMI TCP Connection(2)-127.0.0.1] org.apache.tiles.access.TilesAccess      : Removing TilesContext for context: org.springframework.web.servlet.view.tiles3.SpringWildcardServletTilesApplicationContext
+2019-01-07 11:12:45.408  INFO 95596 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

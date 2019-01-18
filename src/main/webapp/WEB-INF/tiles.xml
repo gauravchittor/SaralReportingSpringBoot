@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE tiles-definitions 
+	PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="base-definition" template="/WEB-INF/layout/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/defaultHeader.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/defaultFooter.jsp" />
+		<!-- <put-attribute name="sideMenu" value="/WEB-INF/tiles/defaultSideMenu.jsp" 
+			/> -->
+	</definition>
+
+	<definition name="welcome" extends="base-definition">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" />
+	</definition>
+
+	<definition name="designPage" extends="base-definition">
+		<put-attribute name="title" value="DesignPage" />
+		<put-attribute name="body" value="/WEB-INF/jsp/designPage.jsp" />
+	</definition>
+	
+	<definition name="reportViewerPage" extends="base-definition">
+		<put-attribute name="title" value="ReportViewerPage" />
+		<put-attribute name="body" value="/WEB-INF/jsp/reportViewerPage.jsp" />
+	</definition>
+	
+	<definition name="updateReportDesign" extends="base-definition">
+		<put-attribute name="title" value="UpdateReportDesign" />
+		<put-attribute name="body" value="/WEB-INF/jsp/updateReportDesign.jsp" />
+	</definition>
+	
+	<definition name="havingfunctionslist" extends="base-definition">
+		<put-attribute name="title" value="HavingFunctionsList" />
+		<put-attribute name="body" value="/WEB-INF/jsp/havingfunctionslist.jsp" />
+	</definition>
+	
+	
+		<definition name="havingfunctionsform" extends="base-definition">
+		<put-attribute name="title" value="HavingFunctionsForm" />
+		<put-attribute name="body" value="/WEB-INF/jsp/havingfunctionsform.jsp" />
+	</definition>
+	
+	<definition name="login" extends="base-definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+
+		<put-attribute name="footer" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="topMenu" value="" />
+		<!-- <put-attribute name="sideMenu" value=""/> -->
+	</definition>
+</tiles-definitions>
