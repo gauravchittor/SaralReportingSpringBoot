@@ -882,12 +882,18 @@
 	        MyJsonFunction = function(){
 	        	/*  var abc = $("#JSONTEXT").text();
 	             $("#selectedColList").val(abc); */	             
-	            var abcB = $("#JSONTEXTB").text();
+	             var abcB = $("#JSONTEXTB").text();
+	             var abc = $("#JSONTEXT").text(); 
+	             if(abc!="" && abcB!=""){
 	             var l1 = abcB.substring(0, abcB.length-1);
-	        	 var abc = $("#JSONTEXT").text();
 	        	 var l2 = abc.substring(1, abc.length);
 	        	 var finalObj = l1 + "," + l2;
-	             $("#selectedColList").val(finalObj);  
+	             $("#selectedColList").val(finalObj);
+	             } else if(abc=="" && abcB!=""){
+	            	$("#selectedColList").val(abcB);
+	             }  else if(abcB=="" && abc!=""){
+	            	$("#selectedColList").val(abc);
+	             } 
 	             
 	             var nvg = $("#rpGrpBy").val();
 	             //var nmg = $("#rpGrpBy option:selected").text();
@@ -1012,7 +1018,7 @@
 	    					$('#ContentPlaceHolder1_CheckBoxList1').empty();
 	    						   $.each(responseJson1, function(key, value) {               
 	    				            /*  $('#ContentPlaceHolder1_CheckBoxList1').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>'); */
-	    				           $('#ContentPlaceHolder1_CheckBoxList1').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" > '+ value.trim() +'</label>' +'<br/>');
+	    				           $('#ContentPlaceHolder1_CheckBoxList1').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" >'+value.trim()+'</label>' +'<br/>');
 	    				         
 	    				        });
 	    						   $('#departmentID').val($('#deptid').val());
@@ -1081,7 +1087,7 @@
 	    					$('#ContentPlaceHolder2_CheckBoxList2').empty();
 	    						   $.each(responseJsonAppInfoCol, function(key, value) {               
 	    				              //	$('#ContentPlaceHolder2_CheckBoxList2').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>');
-	    				           		$('#ContentPlaceHolder2_CheckBoxList2').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" > '+ value.trim() +'</label>' +'<br/>');
+	    				           		$('#ContentPlaceHolder2_CheckBoxList2').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" >'+value.trim() +'</label>' +'<br/>');
 			    				          /*  var newOption = $('<option/>');
 			    							newOption.text(key);
 			    							newOption.attr('value', value);

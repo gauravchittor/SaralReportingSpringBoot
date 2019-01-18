@@ -229,11 +229,16 @@ public class DesignReportController {
 		for (int i = 0; i < len; i++) {
 			ReportSelectColumn col = new ReportSelectColumn();
 			JSONObject objc = jsonArrObject.getJSONObject(i);
+			if(objc.getString("Value").equals(objc.getString("key"))){
+				col.setStatus('I');
+			}else{
+				col.setStatus('A');
+			}
+				
 			col.setReportSelectedColumnId(objc.getString("Value"));
 			col.setReportSelectedColumnName(objc.getString("key"));
 			reportSelectColumnlist.add(col);
 			reportBean.addReportSelectColumn(col);
-
 			System.out.println(col);
 
 		}

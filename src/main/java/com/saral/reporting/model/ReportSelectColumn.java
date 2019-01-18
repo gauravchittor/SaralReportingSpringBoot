@@ -32,12 +32,23 @@ public class ReportSelectColumn {
 
 	@Column(name = "report_selected_column_name", length = 5000)
 	private String reportSelectedColumnName;
+	
+	@Column(name = "status")
+	private Character status;
 
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "report_id", insertable = true, updatable = false, nullable = true)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	@JsonIgnore
 	private ReportBean reportBean12;
+
+	public Character getStatus() {
+		return status;
+	}
+
+	public void setStatus(Character status) {
+		this.status = status;
+	}
 
 	public ReportBean getReportBean() {
 		return reportBean12;
