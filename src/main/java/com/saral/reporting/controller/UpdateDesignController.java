@@ -6,9 +6,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,6 +33,7 @@ public class UpdateDesignController {
 	 
 		
 		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
+		PagedListHolder pagedListHolder = new PagedListHolder(listReport);
 		/*
 		Map<Long, String> l2 = new HashMap<Long, String>();
 		for (ReportBean i : listReport)
@@ -39,6 +42,10 @@ public class UpdateDesignController {
 		model.put("l2",json);
 		
 		System.out.println(json);*/
+		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
+		pagedListHolder.setPage(page);
+		pagedListHolder.setPageSize(3);
+		model.put("pagedListHolder", pagedListHolder);
 		model.put("sign_no", sign_no);
 		model.put("l2",listReport);
 		return "updateReportDesign";				
