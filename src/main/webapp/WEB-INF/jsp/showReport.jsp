@@ -733,13 +733,13 @@
 									</strong>,
 										Report Designer.
 								</div>
-
+								${applInfoJson}
 								
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 						
-						<div class="container" style="margin-top: 20px;">
+						<%-- <div class="container" style="margin-top: 20px;">
 						<jsp:useBean id="pagedListHolder" scope="request"
 							type="org.springframework.beans.support.PagedListHolder" />
 						<c:url value="/fetchReportList?sign_no=${sign_no}" var="pagedLink">
@@ -765,15 +765,15 @@
 									<td style="display: none;">${item.serviceId}</td>
 									<td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}" var="viewURL" /> 
 										<a class="btn btn-primary"	href="${viewURL}" role="button">View</a></td>
-									<%-- <td>${item.price}</td>
+									<td>${item.price}</td>
 									<td>${item.quantity}</td>
-									<td>${item.status }</td> --%>
+									<td>${item.status }</td>
 								</tr>
 							</c:forEach>
 						</table>
 						<tg:paging pagedListHolder="${pagedListHolder}"
 							pagedLink="${pagedLink}" />
-					</div>
+					</div> --%>
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->

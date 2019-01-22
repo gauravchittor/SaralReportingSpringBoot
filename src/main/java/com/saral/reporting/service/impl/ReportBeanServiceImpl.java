@@ -27,6 +27,12 @@ public class ReportBeanServiceImpl implements ReportBeanService {
 		// TODO Auto-generated method stub
 		return reportBeanRepository.findBySignNo(sign_no);
 	}
+	
+	@Override
+	public ReportBean findByReportId(Long reportId) {
+		// TODO Auto-generated method stub
+		return reportBeanRepository.findByReportId(reportId);
+	}
 
 	@Override
 	public void deleteReportBean(Long reportId) {

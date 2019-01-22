@@ -1,4 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,16 +72,17 @@
 								class="menu-icon fa fa-caret-right"></i> Design Reports
 						</a> <b class="arrow"></b></li>
 
-						<li class=""><a href="/fetchReportList"> <i
+						<!-- <li class=""><a href="/fetchReportList"> <i
 								class="menu-icon fa fa-caret-right"></i> View Reports
-						</a> <b class="arrow"></b></li>
+						</a> <b class="arrow"></b></li> -->
 						
 						<li class=""><a href="/fetchReportName?sign_no=${sign_no}"> 
 						<i class="menu-icon fa fa-caret-right"></i> Update Reports
 						</a> <b class="arrow"></b></li>
 					</ul>
 				</li>
-
+				
+				<sec:authorize access="hasRole('ADMIN')">
 				<li class=""><a href="#" class="dropdown-toggle"> <i
 						class="menu-icon fa fa-pencil-square-o"></i> <span
 						class="menu-text">Having Operations </span> <b
@@ -104,6 +107,7 @@
 						
 					</ul>
 				</li>
+				</sec:authorize>	
 				
 				<li class=""><a href="#" class="dropdown-toggle"> <i
 						class="menu-icon fa fa-pencil-square-o"></i> <span
@@ -112,7 +116,7 @@
 						</a> <b class="arrow"></b>
 
 						<ul class="submenu">
-							<li class=""><a href="/fetchReportList"> <i
+							<li class=""><a href="/fetchReportList?sign_no=${sign_no}"> <i
 								class="menu-icon fa fa-caret-right"></i> View Reports
 							</a> <b class="arrow"></b></li>
 					</ul>

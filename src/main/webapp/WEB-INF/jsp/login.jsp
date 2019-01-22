@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -63,7 +64,7 @@
 
 											<div class="space-6"></div>
 
-											<form method="post">
+										<form name='login' action="<c:url value='/login' />" method='POST'>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">

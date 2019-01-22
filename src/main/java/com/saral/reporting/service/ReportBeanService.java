@@ -10,6 +10,8 @@ public interface ReportBeanService {
 	
 	List<ReportBean> findBySignNo(String sign_no);
 	
+	ReportBean findByReportId(Long reportId);
+	
 	void deleteReportBean(Long reportId);
 
 }

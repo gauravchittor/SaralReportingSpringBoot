@@ -82,4 +82,11 @@ public class ReportSelectColumn {
 		this.reportSelectedColumnName = reportSelectedColumnName;
 	}
 
+	@Override
+	public String toString() {
+		return "ReportSelectColumn [reportSelectedcolumnid=" + reportSelectedcolumnid + ", reportSelectedColumnId="
+				+ reportSelectedColumnId + ", reportSelectedColumnName=" + reportSelectedColumnName + ", status="
+				+ status + "]";
+	}
+
 }

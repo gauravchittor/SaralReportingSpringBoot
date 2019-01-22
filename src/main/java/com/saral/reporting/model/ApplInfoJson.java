@@ -32,6 +32,17 @@ public class ApplInfoJson {
 
 	@Column(name = "enclosure_data")
 	private String enclosureData;
+	
+	@Column(name = "service_id")
+	private Long serviceId;
+
+	public Long getServiceId() {
+		return serviceId;
+	}
+
+	public void setServiceId(Long serviceId) {
+		this.serviceId = serviceId;
+	}
 
 	public Long getAid() {
 		return aid;

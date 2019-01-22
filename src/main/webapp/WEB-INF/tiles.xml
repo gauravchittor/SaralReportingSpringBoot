@@ -26,7 +26,12 @@
 		<put-attribute name="title" value="ReportViewerPage" />
 		<put-attribute name="body" value="/WEB-INF/jsp/reportViewerPage.jsp" />
 	</definition>
-	
+
+	<definition name="showReport" extends="base-definition">
+		<put-attribute name="title" value="ShowReport" />
+		<put-attribute name="body" value="/WEB-INF/jsp/showReport.jsp" />
+	</definition>
+		
 	<definition name="updateReportDesign" extends="base-definition">
 		<put-attribute name="title" value="UpdateReportDesign" />
 		<put-attribute name="body" value="/WEB-INF/jsp/updateReportDesign.jsp" />

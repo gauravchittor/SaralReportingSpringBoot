@@ -76,9 +76,9 @@
 								class="menu-icon fa fa-caret-right"></i> Design Reports
 						</a> <b class="arrow"></b></li>
 
-						<li class=""><a href="/fetchReportList"> <i
+						<!-- <li class=""><a href="/fetchReportList"> <i
 								class="menu-icon fa fa-caret-right"></i> View Reports
-						</a> <b class="arrow"></b></li>
+						</a> <b class="arrow"></b></li> -->
 						<li class=""><a href="/fetchReportName?sign_no=${sign_no}"> <i
 								class="menu-icon fa fa-caret-right"></i> Update Reports
 						</a> <b class="arrow"></b></li>
@@ -106,6 +106,18 @@
 						</a> <b class="arrow"></b></li>
 
 						
+					</ul>
+				</li>
+				<li class=""><a href="#" class="dropdown-toggle"> <i
+						class="menu-icon fa fa-pencil-square-o"></i> <span
+						class="menu-text">Report Viewer </span> <b
+						class="arrow fa fa-angle-down"></b>
+						</a> <b class="arrow"></b>
+
+						<ul class="submenu">
+							<li class=""><a href="/fetchReportList?sign_no=${sign_no}"> <i
+								class="menu-icon fa fa-caret-right"></i> View Reports
+							</a> <b class="arrow"></b></li>
 					</ul>
 				</li>
 
@@ -485,7 +497,7 @@
 								<input type="hidden" name="deptid" value=${sign_no} id="sign_no" />
 					</div>
 					
-					<div class="container">
+					<%-- <div class="container">
 						<h2>Report List</h2>
 						<table class="table table-striped">
 							<thead>
@@ -500,7 +512,7 @@
 									<tr>
 										<td style="display:none;">${article.reportId }</td>
 										<td>${article.reportName}</td>
-										<%-- <td>${article.category }</td> --%>
+										<td>${article.category }</td>
 										<td><spring:url	value="/article/updateArticle/${listReport.reportId}" var="updateURL" /> 
 										<a class="btn btn-primary" href="${updateURL}" role="button">Update</a></td>
 										<td><spring:url	value="/deleteSelectedReport?reportId=${article.reportId}&sign_no=${sign_no}" var="deleteURL" /> 
@@ -511,29 +523,35 @@
 						</table>
 						<spring:url	value="/DesignReptPage" var="newUrl" /> 
 										<a class="btn btn-primary" href="${newUrl}" role="button">Desing New Report</a>
-					</div>
+					</div> --%>
 					
 					<div class="container" style="margin-top: 20px;">
+					<spring:url	value="/DesignReptPage" var="newUrl" /> 
+										<a class="btn btn-primary" href="${newUrl}" role="button">Desing New Report</a>
 						<jsp:useBean id="pagedListHolder" scope="request"
 							type="org.springframework.beans.support.PagedListHolder" />
 						<c:url value="/fetchReportName?sign_no=${sign_no}" var="pagedLink">
 							<c:param name="p" value="~" />
 						</c:url>
-
 						<tg:paging pagedListHolder="${pagedListHolder}"
 							pagedLink="${pagedLink}" />
 						<table class="table table-bordered">
 							<tr>
 								<th width="20px">Id</th>
 								<th>Name</th>
-								<!-- <th>Price</th>
-								<th>Quantity</th>
+								<th>Delete</th>
+								<!-- <th>View</th>
+								 <th>Quantity</th>
 								<th>Status</th> -->
 							</tr>
 							<c:forEach items="${pagedListHolder.pageList}" var="item">
 								<tr>
 									<td>${item.reportId}</td>
 									<td>${item.reportName}</td>
+									<td><spring:url	value="/deleteSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}" var="deleteURL" /> 
+										<a class="btn btn-primary"	href="${deleteURL}" role="button">Delete</a></td>
+									<%-- <td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}" var="viewURL" /> 
+										<a class="btn btn-primary"	href="${viewURL}" role="button">View</a></td> --%>
 									<%-- <td>${item.price}</td>
 									<td>${item.quantity}</td>
 									<td>${item.status }</td> --%>

@@ -1,4 +1,5 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 		<meta charset="utf-8" />
 		<title>Dashboard - Saral Report Designer</title>
 
@@ -86,8 +87,9 @@
 							</a></li>
 
 							<li class="divider"></li>
+<c:url value="/logout" var="logoutUrl" />
 
-							<li><a href="#"> <i class="ace-icon fa fa-power-off"></i>
+							<li><a href="${logoutUrl}"> <i class="ace-icon fa fa-power-off"></i>
 									Logout
 							</a></li>
 						</ul></li>

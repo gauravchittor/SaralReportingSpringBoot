@@ -4,15 +4,23 @@ import java.util.HashMap;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.saral.reporting.DAO.LoginDAO;
@@ -22,45 +30,38 @@ import com.saral.reporting.DAO.LoginDAO;
 @SessionAttributes({ "sign_no", "user_id", "user_name", "hm", "department_level_name", "department_id",
 		"designation_id", "designation_name" })
 public class LoginController {
-	
+
 //	private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
 	@PersistenceContext
 	private EntityManager manager;
 
-
-	
 	@Autowired
 	private LoginDAO loginDAO;
 
-	@RequestMapping(value = { "/login", "/" }, method = RequestMethod.GET)
-	public String showLoginPage(ModelMap model) {
+	@RequestMapping(value = {"/", "/login"})
+	public String login(HttpServletRequest request, Model model) {
 
 		return "login";
 	}
-	
-	@RequestMapping(value = { "/login", "/" }, method = RequestMethod.POST)
-	public String showWelcomePage(ModelMap model, @RequestParam String sign_no, @RequestParam String password) {
-		
-		
-		if (sign_no.equals(null) || sign_no == "") {
-			System.out.println("here123");
-			model.put("nameErrorMessage", "UserName cannnot be empty");
-			return "login";
-		}
 
-		else if ((password.equals(null) || password == "")) {
-			System.out.println("here123");
-			model.put("passwordErrorMessage", "Password cannnot be empty");
-			return "login";
-		}
-		List<Object[]> values = loginDAO.validateUser(sign_no, password);
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
+	public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    if (auth != null){    
+	        new SecurityContextLogoutHandler().logout(request, response, auth);
+	    }
+	    return "redirect:/login?logout";//You can redirect wherever you want, but generally it's a good practice to show login screen again.
+	}
+
+	@RequestMapping(value = { "/welcome" }, method = RequestMethod.GET)
+	public String homePage(HttpServletRequest request,ModelMap model) {
+		System.out.println(request.getAttribute("sign_no"));
+		System.out.println(getPrincipal());
+		String sign_no = getPrincipal();
+		List<Object[]> values = loginDAO.getUserInfo(sign_no);
 		loginDAO.testSelectJsonbEntity();
-		if(values.isEmpty()){
-			model.put("passwordErrorMessage", "Either UserName or password is incorrect");
-			return "login";
-		}
-		
+
 		Object[] l1 = values.get(0);
 
 		String sign_no1 = (String) l1[0];
@@ -91,6 +92,19 @@ public class LoginController {
 		model.put("hm", json);
 
 		return "welcome";
+
+	}
+
+	private String getPrincipal() {
+		String userName = null;
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		if (principal instanceof UserDetails) {
+			userName = ((UserDetails) principal).getUsername();
+		} else {
+			userName = principal.toString();
+		}
+		return userName;
 	}
 
 }

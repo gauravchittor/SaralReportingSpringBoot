@@ -10,6 +10,8 @@ public interface ReportBeanRepository extends JpaRepository<ReportBean, Long> {
 
 	List<ReportBean> findBySignNo(String sign_no);
 
+	ReportBean findByReportId(Long reportId);
+	
 	void deleteByReportId(Long reportId);
 
 }

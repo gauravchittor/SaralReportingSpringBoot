@@ -30,18 +30,9 @@ public class UpdateDesignController {
 	
 	@RequestMapping(value = "/fetchReportName", method = { RequestMethod.GET }, produces = "application/json;charset=UTF-8")
 	public String fetchReportName(ModelMap model, @RequestParam String sign_no, HttpServletRequest request) throws ServletException, IOException {
-	 
-		
+	
 		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
 		PagedListHolder pagedListHolder = new PagedListHolder(listReport);
-		/*
-		Map<Long, String> l2 = new HashMap<Long, String>();
-		for (ReportBean i : listReport)
-			l2.put(i.getReportId(),i.getReportName());
-		String json = new Gson().toJson(l2);
-		model.put("l2",json);
-		
-		System.out.println(json);*/
 		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
 		pagedListHolder.setPage(page);
 		pagedListHolder.setPageSize(3);
