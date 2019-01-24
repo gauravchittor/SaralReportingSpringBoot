@@ -866,11 +866,11 @@
 							<div class="col-lg-4 col-md-4 col-xs-12">
 							      <div class="tabbable tabs-left">
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#filter" data-toggle="tab"><img src="../ace-master/assets/images/icons/filter.png" class="img-responsive tab-img"><span>Filters</span></a></li>
-          <li><a href="#editor" data-toggle="tab"><img src="../ace-master/assets/images/icons/editor.png" class="img-responsive tab-img"><span>Editor</span></a></li>
-          <li><a href="#sql" data-toggle="tab"><img src="../ace-master/assets/images/icons/sql.png" class="img-responsive tab-img"><span>SQL</span></a></li>
-		   <li><a href="#setting" data-toggle="tab"><img src="../ace-master/assets/images/icons/setting.png" class="img-responsive tab-img"><span>Settings</span></a></li>
-		   <li><a href="#customize" data-toggle="tab"><img src="../ace-master/assets/images/icons/customize.png" class="img-responsive tab-img"><span>Customize</span></a></li>
+          <li class="active"><a href="#filter" data-toggle="tab"><img src="assets/images/icons/filter.png" class="img-responsive tab-img"><span>Filters</span></a></li>
+          <li><a href="#editor" data-toggle="tab"><img src="assets/images/icons/editor.png" class="img-responsive tab-img"><span>Editor</span></a></li>
+          <li><a href="#sql" data-toggle="tab"><img src="assets/images/icons/sql.png" class="img-responsive tab-img"><span>SQL</span></a></li>
+		   <li><a href="#setting" data-toggle="tab"><img src="assets/images/icons/setting.png" class="img-responsive tab-img"><span>Settings</span></a></li>
+		   <li><a href="#customize" data-toggle="tab"><img src="assets/images/icons/customize.png" class="img-responsive tab-img"><span>Customize</span></a></li>
         </ul>
         <div class="tab-content">
          <div class="tab-pane active" id="filter">
@@ -907,93 +907,31 @@
 							<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="false" id="myCarousel">
   <div class="carousel-inner">
     <div class="item active">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/AreaChart.png" class="area img-responsive" alt="Area Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/AreaChart.png" class="area img-responsive" alt="Area Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
 	
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/AreaSplineChart.png" class="img-responsive" id="areasplineimg"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/AreaStepChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
     <div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/BarChart.png" class="bar img-responsive" alt="Bar Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/BarChart.png" class="bar img-responsive" alt="Bar Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/DonutChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIBubblechart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HICirclepacking.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HICircularGauge.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
+   
 	<div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/HICrossTable.png" class="cross img-responsive" alt="HICrosstable Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/HICrossTable.png" class="cross img-responsive" alt="HICrosstable Chart" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
-	<!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIDendrogram.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
+	
 	<div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/HIGroupedBar.png" class="groupbar img-responsive" alt="HIGroupedBar" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/HIGroupedBar.png" class="groupbar img-responsive" alt="HIGroupedBar" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
-	<!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HILinearGauge.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-	   <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIMap.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIPolarChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIRadarChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIRadialDendrogram.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HISunburst.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
+    
     <div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/HITable.png" class="hitable img-responsive" alt="HItable" data-toggle="modal" data-target="#exampleModal" onclick="CreateTableFromJSON()"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/HITable.png" class="hitable img-responsive" alt="HItable" data-toggle="modal" data-target="#exampleModal" onclick="CreateTableFromJSON()"></a></div>
     </div>
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HITimeSeries.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/HIWidget.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-	    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/LineChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-	    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/logo.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
+   
 		    <div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/PieChart.png" class="pie img-responsive" alt="PieChart" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/PieChart.png" class="pie img-responsive" alt="PieChart" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
-		    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/ScatterChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-		    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/signature.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-		    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/SplineChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
 			    <div class="item">
-      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="../ace-master/assets/images/slider/StackedBar.png" class="stackbar img-responsive" alt="StackedBar" data-toggle="modal" data-target="#exampleModal"></a></div>
+      <div class="col-md-2 col-sm-6 col-xs-4 cus-carimg"><a href="#"><img  src="assets/images/slider/StackedBar.png" class="stackbar img-responsive" alt="StackedBar" data-toggle="modal" data-target="#exampleModal"></a></div>
     </div>
-			    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/StepChart.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
-				    <!-- <div class="item"> -->
-      <!-- <div class="col-md-1 col-sm-6 col-xs-12 cus-carimg"><a href="#"><img src="../ace-master/assets/images/slider/VF.png" class="img-responsive"></a></div> -->
-    <!-- </div> -->
   </div>
 <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></a>
 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></a>
