@@ -138,7 +138,7 @@ public class ViewReportController {
 			result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
 			}
 		model.put("applInfoJson", result);
-		return "showReport";
+		return "showReportNew";
 	}
 
 }
