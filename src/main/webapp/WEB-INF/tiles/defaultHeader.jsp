@@ -46,7 +46,7 @@
 		<script src="js/jquery-ui.js"></script>
 		<script src="js/jscolor.js"></script>
 		<link rel="stylesheet" href="css/jquery-ui.css" />
-		
+		<link rel="stylesheet" href="css/dataTables.jqueryui.min.css" />
 		
 		
 		<div id="navbar" class="navbar navbar-default          ace-save-state">
@@ -86,10 +86,9 @@
 									class="ace-icon fa fa-user"></i> Roles
 							</a></li>
 
-							<li class="divider"></li>
-<c:url value="/logout" var="logoutUrl" />
+							<li class="divider"></li><c:url value="/logout" var="logoutUrl" />
 
-							<li><a href="${logoutUrl}"> <i class="ace-icon fa fa-power-off"></i>
+							<li><a href="${logoutUrl}"><i class="ace-icon fa fa-power-off"></i>
 									Logout
 							</a></li>
 						</ul></li>

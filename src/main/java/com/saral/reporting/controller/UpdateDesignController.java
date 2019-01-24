@@ -32,7 +32,7 @@ public class UpdateDesignController {
 	public String fetchReportName(ModelMap model, @RequestParam String sign_no, HttpServletRequest request) throws ServletException, IOException {
 	
 		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
-		PagedListHolder pagedListHolder = new PagedListHolder(listReport);
+		PagedListHolder<ReportBean> pagedListHolder = new PagedListHolder<ReportBean>(listReport);
 		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
 		pagedListHolder.setPage(page);
 		pagedListHolder.setPageSize(3);

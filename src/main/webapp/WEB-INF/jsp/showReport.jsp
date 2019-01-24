@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib prefix="tg" tagdir="/WEB-INF/tags"%>
@@ -7,7 +6,20 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html lang="en">
-	
+	 <style>
+        th, td, p, input {
+            font:14px Verdana;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
 
 	<body class="no-skin">
 	
@@ -733,47 +745,22 @@
 									</strong>,
 										Report Designer.
 								</div>
-								${applInfoJson}
+								<%-- ${applInfoJson} --%>
 								
 								<!-- PAGE CONTENT ENDS -->
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 						
-						<%-- <div class="container" style="margin-top: 20px;">
-						<jsp:useBean id="pagedListHolder" scope="request"
-							type="org.springframework.beans.support.PagedListHolder" />
-						<c:url value="/fetchReportList?sign_no=${sign_no}" var="pagedLink">
-							<c:param name="p" value="~" />
-						</c:url>
-
-						<tg:paging pagedListHolder="${pagedListHolder}"
-							pagedLink="${pagedLink}" />
-						<table class="table table-bordered">
-							<tr>
-								<th width="20px">Id</th>
-								<th style="display: none;">Service ID</th>
-								<th>Name</th>
-								<th>View</th>
-								<!-- <th>Price</th>
-								<th>Quantity</th>
-								<th>Status</th> -->
-							</tr>
-							<c:forEach items="${pagedListHolder.pageList}" var="item">
-								<tr>
-									<td>${item.reportId}</td>
-									<td>${item.reportName}</td>
-									<td style="display: none;">${item.serviceId}</td>
-									<td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}" var="viewURL" /> 
-										<a class="btn btn-primary"	href="${viewURL}" role="button">View</a></td>
-									<td>${item.price}</td>
-									<td>${item.quantity}</td>
-									<td>${item.status }</td>
-								</tr>
-							</c:forEach>
-						</table>
-						<tg:paging pagedListHolder="${pagedListHolder}"
-							pagedLink="${pagedLink}" />
-					</div> --%>
+						
+						<div id="showReportData">
+							<input type="button" onclick="CreateTableFromJSON()" value="Show report" />
+							<p id="showData"></p>
+						</div>
+						
+						<div class="container">
+					      <table id="example" class="display" width="100%">
+					      </table>
+					    </div>
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
@@ -806,6 +793,7 @@
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
 		<script src="assets/js/jquery-ui.custom.min.js"></script>
+		<script src="assets/js/jquery-ui.custom.min.js"></script>
 		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
 		<script src="assets/js/jquery.easypiechart.min.js"></script>
 		<script src="assets/js/jquery.sparkline.index.min.js"></script>
@@ -816,6 +804,40 @@
 		<!-- ace scripts -->
 		<script src="assets/js/ace-elements.min.js"></script>
 		<script src="assets/js/ace.min.js"></script>
+		<script src="js/dataTables.jqueryui.min.js"></script>
+		<script src="js/jquery.dataTables.min.js"></script>
+		<script>
+    		function CreateTableFromJSON() {
+
+		        //Code for dynamic datatables
+		        var cols = [];
+		        var data = ${applInfoJson};
+		        var exampleRecord = data[0];
+		        
+		        //get keys in object. This will only work if your statement remains true that all objects have identical keys
+		        var keys = Object.keys(exampleRecord);
+		        
+		        //for each key, add a column definition
+		        keys.forEach(function(k) {
+		          cols.push({
+		            title: k,
+		            data: k
+		            //optionally do some type detection here for render function
+		          });
+		        });
+		        
+		        //initialize DataTables
+		        var table = $('#example').DataTable({
+		          columns: cols,
+		          bDestroy: true
+		        });
+		        
+		        //add data and draw
+		        table.clear();
+		        table.rows.add(data).draw();
+		           
+   			}
+		</script>
 		<script>
 			function roles(){
 				 var $select = $("#lrole");                         

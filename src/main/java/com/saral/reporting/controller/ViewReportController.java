@@ -1,7 +1,11 @@
 package com.saral.reporting.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.StringJoiner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -10,8 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.support.PagedListHolder;
@@ -30,56 +32,66 @@ import com.saral.reporting.model.ReportBean;
 import com.saral.reporting.model.ReportSelectColumn;
 import com.saral.reporting.service.ApplInfoJsonService;
 import com.saral.reporting.service.ReportBeanService;
+import com.saral.reporting.utils.JsonUtils;
 
 @Transactional
 @Controller
-/*@SessionAttributes({ "sign_no", "user_id", "user_name", "hm", "department_level_name", "department_id",
-	"designation_id", "designation_name" })*/
+/*
+ * @SessionAttributes({ "sign_no", "user_id", "user_name", "hm",
+ * "department_level_name", "department_id", "designation_id",
+ * "designation_name" })
+ */
 public class ViewReportController {
-	//private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
+	// private static final Logger LOGGER =
+	// LoggerFactory.getLogger(LoginController.class);
 
 	@Autowired
 	ReportBeanService reportBeanService;
-	
+
 	@Autowired
 	ApplInfoJsonService applInfoJsonService;
-	
+
 	@PersistenceContext
 	private EntityManager manager;
 
 	@RequestMapping(value = { "/fetchReportList" }, method = RequestMethod.GET)
-	public String reportViewPage(ModelMap model, @RequestParam String sign_no, HttpServletRequest request) throws ServletException, IOException {
-		
+	public String reportViewPage(ModelMap model, @RequestParam String sign_no, HttpServletRequest request)
+			throws ServletException, IOException {
+
 		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
-		PagedListHolder pagedListHolder = new PagedListHolder(listReport);
+		PagedListHolder<ReportBean> pagedListHolder = new PagedListHolder<ReportBean>(listReport);
 		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
 		pagedListHolder.setPage(page);
 		pagedListHolder.setPageSize(3);
 		model.put("pagedListHolder", pagedListHolder);
 		model.put("sign_no", sign_no);
-		model.put("l2",listReport);			
+		model.put("l2", listReport);
 		return "reportViewerPage";
 	}
-	
-	@SuppressWarnings("unchecked")
+
 	@RequestMapping(value = { "/viewSelectedReport" }, method = RequestMethod.GET)
-	public String reportSelectedReport(ModelMap model, @RequestParam String sign_no, @RequestParam String reportId, @RequestParam String service_id, HttpServletRequest request) throws ServletException, IOException, ParseException {
-		
-		//Fetch Repost designer data on the basis of reportID
+	public String reportSelectedReport(ModelMap model, @RequestParam String sign_no, @RequestParam String reportId,
+			@RequestParam String service_id, HttpServletRequest request)
+			throws ServletException, IOException, ParseException {
+
+		List<Map<String, Object>> listofMap = new ArrayList<>();
+		JSONArray applInfoNode = new JSONArray();
+
+		// Fetch Repost designer data on the basis of reportID
 		Long repId = Long.parseLong(reportId);
 		ReportBean listReport = reportBeanService.findByReportId(repId);
-		System.out.println("My Selected Column list "+listReport.getReportSelectColumnList());
-		
-		/*model.put("reportHeader", listReport.getReportSelectColumnList());*/
+		System.out.println("My Selected Column list " + listReport.getReportSelectColumnList());
+
+		/* model.put("reportHeader", listReport.getReportSelectColumnList()); */
 		List<ReportSelectColumn> L1 = listReport.getReportSelectColumnList();
 		StringBuilder initCol = new StringBuilder();
 		StringBuilder servCol = new StringBuilder();
 		L1.forEach((temp1) -> {
 			System.out.println(temp1.getStatus());
-			if(temp1.getStatus().equals('I')){
+			if (temp1.getStatus().equals('I')) {
 				initCol.append(temp1.getReportSelectedColumnName());
 				initCol.append(",");
-			}else{
+			} else {
 				servCol.append(temp1.getReportSelectedColumnId());
 				servCol.append(",");
 			}
@@ -88,34 +100,45 @@ public class ViewReportController {
 		String servColL = servCol.substring(0, servCol.length() - 1);
 		System.out.println(initColL);
 		System.out.println(servColL);
-		
-		//Find data from Json tables on the basis of Service ID
+		StringJoiner joiner = new StringJoiner(",");
+		joiner.add(initColL).add(servColL);
+		// Find data from Json tables on the basis of Service ID
 		Long servID = Long.parseLong(service_id);
 		List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID);
-		
-		//Fetch applInfoNode from List
-		JSONArray applInfoNode = new JSONArray();
-		JSONParser parser = new JSONParser(); 
+
+		// Fetch applInfoNode from List
+
 		applInfoJson.forEach((temp) -> {
-			JSONObject json = null;
-			try {
-				json = (JSONObject) parser.parse(temp.getApplInfo());
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}
-			applInfoNode.add(json);
+			// map applinfo in map
+			Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
+			System.out.println("My mapObjectinit is: " + mapInit);
+
+			// map attributes in map
+			Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
+			System.out.println("My mapObjectAttr is: " + mapAttr);
+
+			// merging map
+			Map<String, Object> mapFromString = new LinkedHashMap<>();
+			mapFromString.putAll(mapInit);
+			mapFromString.putAll(mapAttr);
+
+			System.out.println("my merged map is :" + mapFromString);
+
+			listofMap.add(mapFromString);
+
 		});
 		System.out.println("ApplInfo Node is: " + applInfoNode);
-		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), initColL);
-		String result = SquigglyUtils.stringify(objectMapper, applInfoNode);
+
+		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
+		String result = SquigglyUtils.stringify(objectMapper, listofMap);
 		System.out.println(result);
-		
-		System.out.println("Your Application Info Json is :" + applInfoJson);
-		applInfoJson.forEach(Item -> System.out.println(Item.getApplInfo()));
-	
-		model.put("applInfoJson", result);		
+
+		for (ReportSelectColumn s : L1) {
+
+			result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
+			}
+		model.put("applInfoJson", result);
 		return "showReport";
 	}
-	
 
 }
