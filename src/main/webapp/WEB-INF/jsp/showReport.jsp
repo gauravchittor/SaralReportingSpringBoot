@@ -758,8 +758,22 @@
 						</div>
 						
 						<div class="container">
-					      <table id="example" class="display" width="100%">
-					      </table>
+						
+							<div class="form-group">
+								<label class="control-label col-sm-3" for="bgtext">Select Page Number:</label>
+								<div class="col-sm-4">
+									<select id="selectPageNum">
+										<option id="0">Please Select</option>
+									</select>
+								</div>
+								<div class="col-sm-4">
+									<input type="submit" style=""
+												class="btn btn-purple no-border" value="Refresh Report" id="refrep" />
+								</div>
+							</div>
+							
+					      	<table id="example" class="display">
+					      	</table>
 					    </div>
 					</div><!-- /.page-content -->
 				</div>
@@ -828,8 +842,11 @@
 		        
 		        //initialize DataTables
 		        var table = $('#example').DataTable({
-		          columns: cols,
-		          bDestroy: true
+		        	columns: cols,
+			        "pageLength": 150,
+			        "pagingType": "simple",
+			        "paging": false,
+			        bDestroy: true
 		        });
 		        
 		        //add data and draw
@@ -849,6 +866,80 @@
 			        });
 				$("#roleModal").modal();
 			}
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+					
+				var count = ${totalPages};
+				for(var n = 1; n<=count; n++) {
+					$('#selectPageNum').append($('<option>', { 
+				        value: n,
+				        text : n 
+				    }));
+				}
+				
+	    		//To fetch Appl Info Columns #ContentPlaceHolder2_CheckBoxList2applInfoCollist
+	    		$('#refrep').click(function() {
+	    			$.ajax({
+	    				type : "get",
+	    				url : '/viewSelectedReport',
+	    				data : {
+	    					deptid : $('#deptid').val(),
+	    					reportId : ${reportId},
+	    					service_id : ${service_id},
+	    					sign_no : "\"${sign_no}\"",
+	    					offset : $('#selectPageNum').val()
+	    				},
+	    				success : function(responseJsonAppInfoCol) {
+	    					
+	    					 //Code for dynamic datatables
+	    			        var cols = [];
+	    			        var data = ${applInfoJson};
+	    			        var exampleRecord = data[0];
+	    			        
+	    			        //get keys in object. This will only work if your statement remains true that all objects have identical keys
+	    			        var keys = Object.keys(exampleRecord);
+	    			        
+	    			        //for each key, add a column definition
+	    			        keys.forEach(function(k) {
+	    			          cols.push({
+	    			            title: k,
+	    			            data: k
+	    			            //optionally do some type detection here for render function
+	    			          });
+	    			        });
+	    			        
+	    			        //initialize DataTables
+	    			        var table = $('#example').DataTable({
+	    			          columns: cols,
+	    			          "pageLength": 150,
+	    			          "pagingType": "simple",
+	    			          "paging": false,
+	    			          bDestroy: true
+	    			        });
+	    			        
+	    			        //add data and draw
+	    			        table.clear();
+	    			        table.rows.add(data).draw();
+	    			           
+	    					
+	    					/* $("#selcol1").show();
+	    					console.log(responseJsonAppInfoCol);
+	    					$('#ContentPlaceHolder2_CheckBoxList2').empty();
+	    						   $.each(responseJsonAppInfoCol, function(key, value) {               
+	    				              //	$('#ContentPlaceHolder2_CheckBoxList2').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>');
+	    				           		$('#ContentPlaceHolder2_CheckBoxList2').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" >'+value.trim() +'</label>' +'<br/>');
+			    				          /*  var newOption = $('<option/>');
+			    							newOption.text(key);
+			    							newOption.attr('value', value);
+			    							$('#rphvngCondition').append(newOption); 
+	    				        });
+	    					initColJs(); */	       
+	    				}
+	    			});
+	    		});
+	    		
+			});
 		</script>
 				
 		<div id="roleModal" class="modal fade" role="dialog" style="display: none;">

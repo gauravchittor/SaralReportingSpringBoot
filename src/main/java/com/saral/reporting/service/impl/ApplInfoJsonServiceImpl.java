@@ -3,6 +3,7 @@ package com.saral.reporting.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.saral.reporting.model.ApplInfoJson;
@@ -16,10 +17,15 @@ public class ApplInfoJsonServiceImpl implements ApplInfoJsonService{
 	ApplInfoJsonRepository applInfoJsonRepository;
 	
 	@Override
-	public List<ApplInfoJson> findByServiceId(Long serviceId) {
+	public List<ApplInfoJson> findByServiceId(Long serviceId, Pageable pageable) {
 		
-		return applInfoJsonRepository.findByServiceId(serviceId);
+		return applInfoJsonRepository.findByServiceId(serviceId, pageable);
 	}
 
+	@Override
+	public Long countByServiceId(Long serviceId) {
+	// TODO Auto-generated method stub
+	return applInfoJsonRepository.countByServiceId(serviceId);
+	}
 	
 }
