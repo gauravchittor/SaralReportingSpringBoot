@@ -920,21 +920,7 @@
 	    			        
 	    			        //add data and draw
 	    			        table.clear();
-	    			        table.rows.add(data).draw();
-	    			           
-	    					
-	    					/* $("#selcol1").show();
-	    					console.log(responseJsonAppInfoCol);
-	    					$('#ContentPlaceHolder2_CheckBoxList2').empty();
-	    						   $.each(responseJsonAppInfoCol, function(key, value) {               
-	    				              //	$('#ContentPlaceHolder2_CheckBoxList2').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>');
-	    				           		$('#ContentPlaceHolder2_CheckBoxList2').append('<input type="checkbox"  name="colmn" value="'+ key +'"/> ' +  '<label for="'+ key +'" >'+value.trim() +'</label>' +'<br/>');
-			    				          /*  var newOption = $('<option/>');
-			    							newOption.text(key);
-			    							newOption.attr('value', value);
-			    							$('#rphvngCondition').append(newOption); 
-	    				        });
-	    					initColJs(); */	       
+	    			        table.rows.add(data).draw();      
 	    				}
 	    			});
 	    		});

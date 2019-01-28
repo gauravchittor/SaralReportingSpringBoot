@@ -13,7 +13,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
-import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.support.PagedListHolder;
@@ -41,14 +40,8 @@ import com.saral.reporting.utils.OffsetBasedPageRequest;
 
 @Transactional
 @Controller
-/*
- * @SessionAttributes({ "sign_no", "user_id", "user_name", "hm",
- * "department_level_name", "department_id", "designation_id",
- * "designation_name" })
- */
+
 public class ViewReportController {
-	// private static final Logger LOGGER =
-	// LoggerFactory.getLogger(LoginController.class);
 
 	@Autowired
 	ReportBeanService reportBeanService;
@@ -80,19 +73,18 @@ public class ViewReportController {
 			throws ServletException, IOException, ParseException {
 
 		List<Map<String, Object>> listofMap = new ArrayList<>();
-		JSONArray applInfoNode = new JSONArray();
+		//JSONArray applInfoNode = new JSONArray();
 
 		// Fetch Repost designer data on the basis of reportID
 		Long repId = Long.parseLong(reportId);
 		ReportBean listReport = reportBeanService.findByReportId(repId);
-		System.out.println("My Selected Column list " + listReport.getReportSelectColumnList());
 
 		/* model.put("reportHeader", listReport.getReportSelectColumnList()); */
 		List<ReportSelectColumn> L1 = listReport.getReportSelectColumnList();
 		StringBuilder initCol = new StringBuilder();
 		StringBuilder servCol = new StringBuilder();
 		L1.forEach((temp1) -> {
-			System.out.println(temp1.getStatus());
+
 			if (temp1.getStatus().equals('I')) {
 				initCol.append(temp1.getReportSelectedColumnName());
 				initCol.append(",");
@@ -103,19 +95,22 @@ public class ViewReportController {
 		});
 		String initColL = initCol.substring(0, initCol.length() - 1);
 		String servColL = servCol.substring(0, servCol.length() - 1);
-		System.out.println(initColL);
-		System.out.println(servColL);
+
 		StringJoiner joiner = new StringJoiner(",");
 		joiner.add(initColL).add(servColL);
 
 		// Find data from Json tables on the basis of Service ID
 		Long servID = Long.parseLong(service_id);
 		Long totalRecords = applInfoJsonService.countByServiceId(servID);
-		int totalPages = (int) (totalRecords/150);
+		int totalPages = (int) (totalRecords / 150);
+		int resultTP = (int) (totalRecords % 150);
+		if(resultTP == 0){
+	        }else{
+		        totalPages = totalPages + 1;
+	        }
 		model.put("totalPages", totalPages);
-		System.out.println("Service Records present in the database :"+ totalRecords);
-		
-		if(totalRecords <= 6000L){
+
+		if (totalRecords <= 6000L) {
 			Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
 			Pageable pageable = new PageRequest(0, 6000, sort);
 			List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
@@ -125,124 +120,73 @@ public class ViewReportController {
 			applInfoJson.forEach((temp) -> {
 				// map applinfo in map
 				Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
-				System.out.println("My mapObjectinit is: " + mapInit);
+				// map attributes in map
+				Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
+
+				// merging map
+				Map<String, Object> mapFromString = new LinkedHashMap<>();
+				mapFromString.putAll(mapInit);
+				mapFromString.putAll(mapAttr);
+				System.out.println("Program is in first loop where records are less than 6000");
+				listofMap.add(mapFromString);
+
+			});
+
+			ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
+			String result = SquigglyUtils.stringify(objectMapper, listofMap);
+
+			for (ReportSelectColumn s : L1) {
+				result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
+			}
+			model.put("applInfoJson", result);
+			model.put("reportId", repId);
+			model.put("service_id", servID);
+			model.put("service_id", servID);
+			return "showReportNew";
+		} else {
+
+			int offsetup = 0;
+			if (offset == "" || offset == "0") {
+				offsetup = 0;
+			} else {
+				offsetup = (150 * (Integer.parseInt(offset) - 1));
+			}
+			int limit = 150;
+			Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
+			Pageable pageable2 = new OffsetBasedPageRequest(offsetup, limit, sort);
+			List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable2);
+
+			// Fetch applInfoNode from List
+			applInfoJson.forEach((temp) -> {
+				// map applinfo in map
+				Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
 
 				// map attributes in map
 				Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
-				System.out.println("My mapObjectAttr is: " + mapAttr);
 
 				// merging map
 				Map<String, Object> mapFromString = new LinkedHashMap<>();
 				mapFromString.putAll(mapInit);
 				mapFromString.putAll(mapAttr);
 
-				System.out.println("my merged map is :" + mapFromString);
-				System.out.println("Program is in first loop where records are less than 6000");
-
 				listofMap.add(mapFromString);
 
 			});
-			System.out.println("ApplInfo Node is: " + applInfoNode);
 
 			ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
 			String result = SquigglyUtils.stringify(objectMapper, listofMap);
-			System.out.println(result);
 
 			for (ReportSelectColumn s : L1) {
+
 				result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
-				}
+			}
 			model.put("applInfoJson", result);
 			model.put("reportId", repId);
 			model.put("service_id", servID);
-			model.put("service_id", servID);
-			return "showReportNew";
-		}else {
-			System.out.println("Inside second loop where records are greater than 6000");
-			
-			int offsetup = 0;
-			if(offset=="" || offset=="0"){
-				 offsetup = 0;
-			}else {
-				 offsetup = (150 * (Integer.parseInt(offset)-1));
-			}
-			int limit = 150;
-			Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
-			 Pageable pageable2 = new OffsetBasedPageRequest(offsetup, limit, sort);
-			 List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable2);
-			 System.out.println("Program is in first loop where records are less than 6000");
-			// Fetch applInfoNode from List
+			System.out.println("Inside second loop where records are greater than 6000 ==== FINAL");
+			return "showReport";
 
-				applInfoJson.forEach((temp) -> {
-					// map applinfo in map
-					Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
-					System.out.println("My mapObjectinit is: " + mapInit);
-					// map attributes in map
-					Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
-					System.out.println("My mapObjectAttr is: " + mapAttr);
-					// merging map
-					Map<String, Object> mapFromString = new LinkedHashMap<>();
-					mapFromString.putAll(mapInit);
-					mapFromString.putAll(mapAttr);
-					System.out.println("my merged map is :" + mapFromString);
-					listofMap.add(mapFromString);
-
-				});
-				System.out.println("ApplInfo Node is: " + applInfoNode);
-
-				ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
-				String result = SquigglyUtils.stringify(objectMapper, listofMap);
-				System.out.println(result);
-
-				for (ReportSelectColumn s : L1) {
-
-					result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
-					}
-				model.put("applInfoJson", result);
-				model.put("reportId", repId);
-				model.put("service_id", servID);
-				System.out.println("Inside second loop where records are greater than 6000 ==== FINAL");
-				/*return "showReportNew";*/
-				return "showReport";
-			   
 		}
-		
-		/*Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
-		Pageable pageable = new PageRequest(0, 6000, sort);
-		List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
-
-		// Fetch applInfoNode from List
-
-		applInfoJson.forEach((temp) -> {
-			// map applinfo in map
-			Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
-			System.out.println("My mapObjectinit is: " + mapInit);
-
-			// map attributes in map
-			Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
-			System.out.println("My mapObjectAttr is: " + mapAttr);
-
-			// merging map
-			Map<String, Object> mapFromString = new LinkedHashMap<>();
-			mapFromString.putAll(mapInit);
-			mapFromString.putAll(mapAttr);
-
-			System.out.println("my merged map is :" + mapFromString);
-
-			listofMap.add(mapFromString);
-
-		});
-		System.out.println("ApplInfo Node is: " + applInfoNode);
-
-		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
-		String result = SquigglyUtils.stringify(objectMapper, listofMap);
-		System.out.println(result);
-
-		for (ReportSelectColumn s : L1) {
-
-			result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
-			}
-		model.put("applInfoJson", result);
-		return "showReportNew";*/
 	}
 
 }
