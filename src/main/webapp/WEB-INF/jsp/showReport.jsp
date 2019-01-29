@@ -887,8 +887,7 @@
 	    					deptid : $('#deptid').val(),
 	    					reportId : ${reportId},
 	    					service_id : ${service_id},
-	    					sign_no : "\"${sign_no}\"",
-	    					offset : $('#selectPageNum').val()
+	    					sign_no : "\"${sign_no}\""
 	    				},
 	    				success : function(responseJsonAppInfoCol) {
 	    					

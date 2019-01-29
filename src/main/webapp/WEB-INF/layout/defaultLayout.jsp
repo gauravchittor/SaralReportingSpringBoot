@@ -10,16 +10,12 @@
             <tiles:insertAttribute name="header" />
         </td>
     </tr>
-<!--     <tr>
-    	
-    </tr> -->
+
     <tr>
         <td>
             <tiles:insertAttribute name="menu" />
         </td>
-  <%--       <td style=" width:20%;">
-            <tiles:insertAttribute name="sideMenu" />
-        </td> --%>
+
         <td style="height:100%;">
             <tiles:insertAttribute name="body" />
         </td>

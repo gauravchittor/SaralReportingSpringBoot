@@ -47,8 +47,13 @@
 		<put-attribute name="body" value="/WEB-INF/jsp/havingfunctionslist.jsp" />
 	</definition>
 	
+	<definition name="list" extends="base-definition">
+		<put-attribute name="title" value="List" />
+		<put-attribute name="body" value="/WEB-INF/jsp/list.jsp" />
+	</definition>
 	
-		<definition name="havingfunctionsform" extends="base-definition">
+	
+	<definition name="havingfunctionsform" extends="base-definition">
 		<put-attribute name="title" value="HavingFunctionsForm" />
 		<put-attribute name="body" value="/WEB-INF/jsp/havingfunctionsform.jsp" />
 	</definition>

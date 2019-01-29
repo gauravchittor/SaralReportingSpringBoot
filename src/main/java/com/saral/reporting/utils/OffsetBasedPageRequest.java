@@ -1,4 +1,4 @@
-package com.saral.reporting.utils;
+/*package com.saral.reporting.utils;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -9,9 +9,9 @@ import org.springframework.data.domain.Sort;
 
 import java.io.Serializable;
 
-/**
+*//**
 * Created by Ergin
-**/
+**//*
 public class OffsetBasedPageRequest implements Pageable, Serializable {
 
     private static final long serialVersionUID = -25822477129613575L;
@@ -20,13 +20,13 @@ public class OffsetBasedPageRequest implements Pageable, Serializable {
     private int offset;
     private final Sort sort;
 
-    /**
+    *//**
      * Creates a new {@link OffsetBasedPageRequest} with sort parameters applied.
      *
      * @param offset zero-based offset.
      * @param limit  the size of the elements to be returned.
      * @param sort   can be {@literal null}.
-     */
+     *//*
     public OffsetBasedPageRequest(int offset, int limit, Sort sort) {
         if (offset < 0) {
             throw new IllegalArgumentException("Offset index must not be less than zero!");
@@ -40,24 +40,24 @@ public class OffsetBasedPageRequest implements Pageable, Serializable {
         this.sort = sort;
     }
 
-    /**
+    *//**
      * Creates a new {@link OffsetBasedPageRequest} with sort parameters applied.
      *
      * @param offset     zero-based offset.
      * @param limit      the size of the elements to be returned.
      * @param direction  the direction of the {@link Sort} to be specified, can be {@literal null}.
      * @param properties the properties to sort by, must not be {@literal null} or empty.
-     */
+     *//*
     public OffsetBasedPageRequest(int offset, int limit, Sort.Direction direction, String... properties) {
         this(offset, limit, new Sort(direction, properties));
     }
 
-    /**
+    *//**
      * Creates a new {@link OffsetBasedPageRequest} with sort parameters applied.
      *
      * @param offset zero-based offset.
      * @param limit  the size of the elements to be returned.
-     */
+     *//*
     public OffsetBasedPageRequest(int offset, int limit) {
         this(offset, limit, new Sort(Sort.Direction.ASC,"id"));
     }
@@ -139,4 +139,4 @@ public class OffsetBasedPageRequest implements Pageable, Serializable {
                 .append("sort", sort)
                 .toString();
     }
-}
+}*/

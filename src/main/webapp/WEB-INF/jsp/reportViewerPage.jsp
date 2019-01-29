@@ -762,7 +762,7 @@
 									<td>${item.reportId}</td>
 									<td>${item.reportName}</td>
 									<td style="display: none;">${item.serviceId}</td>
-									<td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}&offset=1" var="viewURL" /> 
+									<td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}&page=1" var="viewURL" /> 
 										<a class="btn btn-primary"	href="${viewURL}" role="button">View</a></td>
 									<%-- <td>${item.price}</td>
 									<td>${item.quantity}</td>
