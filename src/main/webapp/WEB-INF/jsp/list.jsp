@@ -99,6 +99,8 @@
 	        "pageLength": 150,
 	        "pagingType": "simple",
 	        "paging": false,
+	        "scrollY": "500px",
+	        "scrollCollapse": true,
 	        bDestroy: true
         });
         
