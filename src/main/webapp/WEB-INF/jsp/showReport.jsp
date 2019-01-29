@@ -929,32 +929,27 @@
 		</script>
 				
 		<div id="roleModal" class="modal fade" role="dialog" style="display: none;">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header header-border'">
-				<button type="button" class="close" data-dismiss="modal"> X </button>
-				<h4 class="modal-title">Assigned Role to the user- ${user_name} </h4>
-			</div>
-			<div class="modal-body">
-				
-					<div class="col-lg-12">
-									<li id="lrole" class="list-group-item">
-									
-										<ul>
-										
-										</ul>
-									
-									</li>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header header-border'">
+						<button type="button" class="close" data-dismiss="modal"> X </button>
+						<h4 class="modal-title">Assigned Role to the user- ${user_name} </h4>
 					</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">
-					<i class="fa fa-times-circle"></i>&nbsp;Close
-				</button>
+					<div class="modal-body">
+						<div class="col-lg-12">
+							<li id="lrole" class="list-group-item">
+								<ul>
+								</ul>
+							</li>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal">
+							<i class="fa fa-times-circle"></i>&nbsp;Close
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
-
-	</div>
-</div>
 	</body>
 </html>
