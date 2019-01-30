@@ -117,7 +117,7 @@
 	function modifyData(suffix) {
 		$.ajax({
 			type : "GET",
-			url : '/viewSelectedReport?page='+suffix,
+			url : '/viewSelectedReportData?page='+suffix,
 			data : {
 				deptid : $('#deptid').val(),
 				reportId : ${reportId},
@@ -126,10 +126,10 @@
 				
 			},
 			success : function(data) {
-
+				CreateTableFromJSON();
 				/* $(".inner-jsp").html(data); */
-				
-				window.location.href='http://localhost:8082/viewSelectedReport?reportId='+${reportId}+'&sign_no='+"\"${sign_no}\""+'&service_id='+${service_id}+'&page='+suffix;
+				window.location.href='/viewSelectedReportData?page='+suffix;
+				//window.location.href='http://localhost:8082/viewSelectedReport?reportId='+${reportId}+'&sign_no='+"\"${sign_no}\""+'&service_id='+${service_id}+'&page='+suffix;
 			}
 		});
 	}

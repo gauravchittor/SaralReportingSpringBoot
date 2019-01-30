@@ -135,7 +135,7 @@
 						</a> <b class="arrow"></b>
 
 						<ul class="submenu">
-							<li class=""><a href="/fetchReportList?sign_no=${sign_no}"> <i
+							<li class=""><a href="/fetchReportList"> <i
 								class="menu-icon fa fa-caret-right"></i> View Reports
 							</a> <b class="arrow"></b></li>
 					</ul>
@@ -741,7 +741,7 @@
 						<div class="container" style="margin-top: 20px;">
 						<jsp:useBean id="pagedListHolder" scope="request"
 							type="org.springframework.beans.support.PagedListHolder" />
-						<c:url value="/fetchReportList?sign_no=${sign_no}" var="pagedLink">
+						<c:url value="/fetchReportList" var="pagedLink">
 							<c:param name="p" value="~" />
 						</c:url>
 
@@ -753,20 +753,14 @@
 								<th style="display: none;">Service ID</th>
 								<th>Name</th>
 								<th>View</th>
-								<!-- <th>Price</th>
-								<th>Quantity</th>
-								<th>Status</th> -->
 							</tr>
 							<c:forEach items="${pagedListHolder.pageList}" var="item">
 								<tr>
 									<td>${item.reportId}</td>
 									<td>${item.reportName}</td>
 									<td style="display: none;">${item.serviceId}</td>
-									<td><spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}&page=1" var="viewURL" /> 
-										<a class="btn btn-primary"	href="${viewURL}" role="button">View</a></td>
-									<%-- <td>${item.price}</td>
-									<td>${item.quantity}</td>
-									<td>${item.status }</td> --%>
+									<td><%-- <spring:url	value="/viewSelectedReport?reportId=${item.reportId}&sign_no=${sign_no}&service_id=${item.serviceId}&page=1" var="viewURL" /> --%> 
+										<a class="btn btn-primary"	href="javascript:void(0);" role="button" onclick="getData('${item.serviceId}','${item.reportId}')">View</a></td>
 								</tr>
 							</c:forEach>
 						</table>
@@ -827,6 +821,29 @@
 				$("#roleModal").modal();
 			}
 		</script>
+		<script type="text/javascript">
+			function getData(servId,repId) {
+				modifyData(servId,repId);
+			}
+
+			function modifyData(servId,repId) {
+				$.ajax({
+					type : "GET",
+					url : '/viewSelectedReport?page=1',
+					data : {
+						reportId : repId,
+						service_id : servId
+					},
+					success : function(data) {
+						window.location.href='/viewSelectedReportData?page=1';
+						/* $(".inner-jsp").html(data); */
+						//window.location.href='http://localhost:8082/viewSelectedReport?reportId='+${reportId}+'&sign_no='+"\"${sign_no}\""+'&service_id='+${service_id}+'&page='+suffix;
+					}
+				});
+			}
+		
+		</script>
+
 				
 		<div id="roleModal" class="modal fade" role="dialog" style="display: none;">
 	<div class="modal-dialog">

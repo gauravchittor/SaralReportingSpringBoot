@@ -28,6 +28,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
@@ -42,6 +43,8 @@ import com.saral.reporting.utils.JsonUtils;
 @Transactional
 @Controller
 
+@SessionAttributes({ "sign_no", "reportId", "service_id", "hm", "department_level_name", "department_id",
+	"designation_id", "designation_name" })
 public class ViewReportController {
 
 	@Autowired
@@ -54,9 +57,9 @@ public class ViewReportController {
 	private EntityManager manager;
 
 	@RequestMapping(value = { "/fetchReportList" }, method = RequestMethod.GET)
-	public String reportViewPage(ModelMap model, @RequestParam String sign_no, HttpServletRequest request)
+	public String reportViewPage(ModelMap model, HttpServletRequest request)
 			throws ServletException, IOException {
-
+		String sign_no = (String) request.getSession().getAttribute("sign_no");
 		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
 		PagedListHolder<ReportBean> pagedListHolder = new PagedListHolder<ReportBean>(listReport);
 		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
@@ -68,20 +71,49 @@ public class ViewReportController {
 		return "reportViewerPage";
 	}
 
-	//@RequestMapping(value = { "/viewSelectedReport" }, method = RequestMethod.GET)
-	@GetMapping("/viewSelectedReport")
-	public String reportSelectedReport(ModelMap model, Pageable pageable, @RequestParam String sign_no, @RequestParam String reportId,
+	@RequestMapping(value = { "/viewSelectedReport" }, method = RequestMethod.GET)
+	//@GetMapping("/viewSelectedReport")
+	public String reportSelectedReport(ModelMap model, Pageable pageable, @RequestParam String reportId,
 			@RequestParam String service_id, HttpServletRequest request)
 			throws ServletException, IOException, ParseException {
 
-		List<Map<String, Object>> listofMap = new ArrayList<>();
-		//JSONArray applInfoNode = new JSONArray();
-
-		// Fetch Repost designer data on the basis of reportID
+		
+		
 		Long repId = Long.parseLong(reportId);
+		Long servID = Long.parseLong(service_id);
+		Long totalRecords = applInfoJsonService.countByServiceId(servID);
+		
+		if(totalRecords==0){
+			model.put("ErrorReport", "No Record found for this Report");
+			return "list";
+		}
+		else{
+			int totalPages = (int) (totalRecords / 150);
+			int resultTP = (int) (totalRecords % 150);
+			if(resultTP == 0){
+		        }else{
+			        totalPages = totalPages + 1;
+		        }
+			model.put("totalPages", totalPages);
+			model.put("reportId", repId);
+			model.put("service_id", servID);
+			return "list";
+		}
+	}
+
+	
+	@RequestMapping(value = { "/viewSelectedReportData" }, method = RequestMethod.GET)
+	//@GetMapping("/viewSelectedReport")
+	public String reportSelectedReportShow(ModelMap model, Pageable pageable, HttpServletRequest request)
+			throws ServletException, IOException, ParseException {
+		System.out.println();
+		Long repId = (Long) request.getSession().getAttribute("reportId");
+		Long servID = (Long) request.getSession().getAttribute("service_id");
+		
+		List<Map<String, Object>> listofMap = new ArrayList<>();
+		
 		ReportBean listReport = reportBeanService.findByReportId(repId);
 
-		/* model.put("reportHeader", listReport.getReportSelectColumnList()); */
 		List<ReportSelectColumn> L1 = listReport.getReportSelectColumnList();
 		StringBuilder initCol = new StringBuilder();
 		StringBuilder servCol = new StringBuilder();
@@ -102,7 +134,7 @@ public class ViewReportController {
 		joiner.add(initColL).add(servColL);
 
 		// Find data from Json tables on the basis of Service ID
-		Long servID = Long.parseLong(service_id);
+		//Long servID = Long.parseLong(service_id);
 		Long totalRecords = applInfoJsonService.countByServiceId(servID);
 		int totalPages = (int) (totalRecords / 150);
 		int resultTP = (int) (totalRecords % 150);
@@ -143,23 +175,12 @@ public class ViewReportController {
 			model.put("applInfoJson", result);
 			model.put("reportId", repId);
 			model.put("service_id", servID);
-			model.put("service_id", servID);
 			
 			model.addAttribute("addresses", result);
 			JsonUtils.pageModel(model, applInfoJson);
 			
 			return "list";
 		} else {
-
-		/*	int offsetup = 0;
-			if (offset == "" || offset == "0") {
-				offsetup = 0;
-			} else {
-				offsetup = (150 * (Integer.parseInt(offset) - 1));
-			}
-			int limit = 150;
-			Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));*/
-			//Pageable pageable2 = new OffsetBasedPageRequest(offsetup, limit, sort);
 			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
 			System.out.println(applInfoJson);
 
@@ -201,9 +222,7 @@ public class ViewReportController {
 			System.out.println("number" + pNumber);
 			System.out.println("size" + size);
 			return "list";
-
 		}
 	}
-
 
 }
