@@ -114,7 +114,7 @@
 						</a> <b class="arrow"></b>
 
 						<ul class="submenu">
-							<li class=""><a href="/fetchReportList?sign_no=${sign_no}"> <i
+							<li class=""><a href="/fetchReportList"> <i
 								class="menu-icon fa fa-caret-right"></i> View Reports
 							</a> <b class="arrow"></b></li>
 					</ul>

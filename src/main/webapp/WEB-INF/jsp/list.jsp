@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<div class="panel panel-default">
+<div id="myform" class="panel panel-default">
 	<div class="panel-heading">
 		<strong>
 			<span class="glyphicon glyphicon-list"></span> Address List
@@ -110,6 +110,43 @@
            
 		}
 	
+/* 	function CreateTableFromJSON2(data) {
+
+        //Code for dynamic datatables
+        var cols = [];
+        var data = data;
+        var exampleRecord = data[0];
+        
+        //get keys in object. This will only work if your statement remains true that all objects have identical keys
+        var keys = Object.keys(exampleRecord);
+        
+        //for each key, add a column definition
+        keys.forEach(function(k) {
+          cols.push({
+            title: k,
+            data: k
+            //optionally do some type detection here for render function
+          });
+        });
+        
+        //initialize DataTables
+        var table = $('#example').DataTable({
+        	columns: cols,
+	        "pageLength": 150,
+	        "pagingType": "simple",
+	        "paging": false,
+	        "scrollY": "500px",
+	        "scrollCollapse": true,
+	        bDestroy: true
+        });
+        
+        //add data and draw
+        table.clear();
+        table.rows.add(data).draw();
+           
+		} */
+	
+	
 	function list(page) {
 		modifyData(page);
 	}
@@ -126,10 +163,11 @@
 				
 			},
 			success : function(data) {
-				CreateTableFromJSON();
-				/* $(".inner-jsp").html(data); */
+				//console.log("This is data " +data);
+				 //$("#myform").replaceWith(data);
+				
 				window.location.href='/viewSelectedReportData?page='+suffix;
-				//window.location.href='http://localhost:8082/viewSelectedReport?reportId='+${reportId}+'&sign_no='+"\"${sign_no}\""+'&service_id='+${service_id}+'&page='+suffix;
+				
 			}
 		});
 	}
