@@ -179,7 +179,7 @@ public class ViewReportController {
 			model.addAttribute("addresses", result);
 			JsonUtils.pageModel(model, applInfoJson);
 			
-			return "list";
+			return "showReportNew";
 		} else {
 			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
 			System.out.println(applInfoJson);
@@ -221,7 +221,7 @@ public class ViewReportController {
 			model.put("size", size);
 			System.out.println("number" + pNumber);
 			System.out.println("size" + size);
-			return "list";
+			return "showReportNew";
 		}
 	}
 
