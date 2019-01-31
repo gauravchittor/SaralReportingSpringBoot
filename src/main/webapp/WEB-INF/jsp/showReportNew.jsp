@@ -868,47 +868,8 @@
         
 						<div class="row">
 							<div class="col-lg-12 col-md-12 col-xs-12">
-							<div class="col-lg-4 col-md-4 col-xs-12">
-							      <div class="tabbable tabs-left">
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#filter" data-toggle="tab"><img src="assets/images/icons/filter.png" class="img-responsive tab-img"><span>Filters</span></a></li>
-          <li><a href="#editor" data-toggle="tab"><img src="assets/images/icons/editor.png" class="img-responsive tab-img"><span>Editor</span></a></li>
-          <li><a href="#sql" data-toggle="tab"><img src="assets/images/icons/sql.png" class="img-responsive tab-img"><span>SQL</span></a></li>
-		   <li><a href="#setting" data-toggle="tab"><img src="assets/images/icons/setting.png" class="img-responsive tab-img"><span>Settings</span></a></li>
-		   <li><a href="#customize" data-toggle="tab"><img src="assets/images/icons/customize.png" class="img-responsive tab-img"><span>Customize</span></a></li>
-        </ul>
-        <div class="tab-content">
-         <div class="tab-pane active" id="filter">
-		<span class="cus-filter">Filter</span>
-		<div class="tab-pane cus-filter" id="filter">
-		<p>Expression</p>
-		            <div class="panel with-nav-tabs panel-default">
-                <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1default" data-toggle="tab">Filter</a></li>
-                            <li><a href="#tab2default" data-toggle="tab">Having</a></li>
-                                              </ul>
-                </div>
-                <div class="">
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1default"><textarea>Filter</textarea></div>
-                        <div class="tab-pane fade" id="tab2default"><textarea>Having</textarea></div>
-  
-                    </div>
-                </div>
-            </div>
-		 </div>
-		 </div>
 
-         <div class="tab-pane" id="editor">Editor</div>
-         <div class="tab-pane" id="sql">SQL</div>
-		 <div class="tab-pane" id="setting">Setting</div>
-		 <div class="tab-pane" id="customize">customize</div>
-        </div>
-      </div>
-							</div>
-
-							<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="false" id="myCarousel">
   <div class="carousel-inner">
     <div class="item active">
@@ -1036,32 +997,6 @@
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
-
-			<div class="footer">
-				<div class="footer-inner">
-					<div class="footer-content">
-						<span class="bigger-120">
-							<span class="blue bolder">Ace</span>
-							Application &copy; 2013-2014
-						</span>
-
-						&nbsp; &nbsp;
-						<span class="action-buttons">
-							<a href="#">
-								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
-							</a>
-
-							<a href="#">
-								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
-							</a>
-						</span>
-					</div>
-				</div>
-			</div>
 
 			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
@@ -1724,7 +1659,9 @@ Highcharts.chart('stackedbar', {
 	        var table = $('#example').DataTable({
 	        	columns: cols,
 		        bDestroy: true,
-		        "paging": false
+		        "paging": false,
+		        "bInfo" : false,
+		        "scrollY": "500px"
 	        });
 	        
 	        //add data and draw
