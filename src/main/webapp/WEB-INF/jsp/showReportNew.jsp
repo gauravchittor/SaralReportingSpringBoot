@@ -980,6 +980,9 @@
 		</div>
 <!-- <table id="example" class="table table-striped table-bordered" style="width:100%">
     </table> -->
+    <div>
+    	<label>Export Data To :</label><a href="/reportExport" class="btn btn-default" >Excel</a>
+    </div>
 </div>
 <div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 <div id="stackedbar" style="min-width: 310px; height: 400px; margin: 0 auto"></div>

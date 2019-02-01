@@ -15,5 +15,7 @@ public interface ApplInfoJsonRepository extends JpaRepository<ApplInfoJson, Long
 	Page<ApplInfoJson> findByServiceId(Long serviceId, Pageable pageable);
 	
 	Long countByServiceId(Long serviceId);
+
+	List<ApplInfoJson> findByServiceId(Long serviceId);
 	
 }

@@ -14,4 +14,6 @@ public interface ApplInfoJsonService {
 	Page<ApplInfoJson> findByServiceId(Long serviceId, Pageable pageable);
 	
 	Long countByServiceId(Long serviceId);
+	
+	List<ApplInfoJson> findByServiceIdForExcel(Long serviceId); 
 }

@@ -97,7 +97,7 @@ public class ViewReportController {
 			model.put("totalPages", totalPages);
 			model.put("reportId", repId);
 			model.put("service_id", servID);
-			return "list";
+			return "showReportNew";
 		}
 	}
 

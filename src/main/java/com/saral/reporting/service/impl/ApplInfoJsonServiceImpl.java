@@ -30,7 +30,12 @@ public class ApplInfoJsonServiceImpl implements ApplInfoJsonService{
 		return applInfoJsonRepository.findByServiceId(serviceId, new PageRequest(pageable.getPageNumber()-1, 150));
 	}
 
-
+	@Override
+	public List<ApplInfoJson> findByServiceIdForExcel(Long serviceId) {
+		
+		return applInfoJsonRepository.findByServiceId(serviceId);
+	}
+	
 	@Override
 	public Long countByServiceId(Long serviceId) {
 	// TODO Auto-generated method stub
