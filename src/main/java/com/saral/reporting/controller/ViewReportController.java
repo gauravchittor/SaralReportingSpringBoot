@@ -144,7 +144,7 @@ public class ViewReportController {
 	        }
 		model.put("totalPages", totalPages);
 
-		if (totalRecords <= 6000L) {
+		/*if (totalRecords <= 6000L) {
 			//Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
 			//pageable = new PageRequest(0, 6000, sort);
 			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
@@ -180,7 +180,7 @@ public class ViewReportController {
 			JsonUtils.pageModel(model, applInfoJson);
 			
 			return "showReportNew";
-		} else {
+		} else */
 			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
 			System.out.println(applInfoJson);
 
@@ -222,7 +222,7 @@ public class ViewReportController {
 			System.out.println("number" + pNumber);
 			System.out.println("size" + size);
 			return "showReportNew";
-		}
+		
 	}
 
 }
