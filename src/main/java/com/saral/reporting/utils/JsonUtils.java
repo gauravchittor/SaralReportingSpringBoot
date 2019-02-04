@@ -1,6 +1,8 @@
 package com.saral.reporting.utils;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -65,6 +67,14 @@ public class JsonUtils {
 		    e.printStackTrace();
 		}
 		return mapFromString;
+	}
+	
+	public static String FileNameDate(){
+		String pattern = "yyyy-MM-dd"; 
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern); 
+		String date = simpleDateFormat.format(new Date()); 
+		System.out.println(date);
+		return date;
 	}
 }
 

@@ -3,6 +3,7 @@ package com.saral.reporting.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,6 +34,7 @@ import com.saral.reporting.model.ReportSelectColumn;
 import com.saral.reporting.service.ApplInfoJsonService;
 import com.saral.reporting.service.ReportBeanService;
 import com.saral.reporting.utils.JsonUtils;
+import com.saral.reporting.utils.StringConstants;
 import com.saral.reporting.view.ExcelViewReport;
 
 @Controller
@@ -44,6 +46,9 @@ public class ReportController {
 	
 	@Autowired
 	ReportBeanService reportBeanService;
+	
+	@Autowired
+	FileDownloadController fileDownloadController;
 	
 	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
 	public ModelAndView mainListReport(HttpServletRequest res, HttpServletResponse rep){
@@ -61,6 +66,7 @@ public class ReportController {
 		
 		Long repId = (Long) res.getSession().getAttribute("reportId");
 		Long servID = (Long) res.getSession().getAttribute("service_id");
+		String sign_no = (String) res.getSession().getAttribute("sign_no");
 		List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceIdForExcel(servID);
 		System.out.println("Service id and report id is:" + servID + " And " + repId );
 		//return new ModelAndView(new ExcelViewReport(), "applInfoJsonForExcel", applInfoJson);
@@ -107,24 +113,6 @@ public class ReportController {
 			
 		}
 		System.out.println("I am at 3rd level");
-		// Fetch applInfoNode from List
-		/*applInfoJson.forEach((temp) -> {
-			// map applinfo in map
-			Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
-			System.out.println("I am at 2nd level");
-			// map attributes in map
-			Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
-
-			// merging map
-			Map<String, Object> mapFromString = new LinkedHashMap<>();
-			mapFromString.putAll(mapInit);
-			mapFromString.putAll(mapAttr);
-
-			listofMap.add(mapFromString);
-			System.out.println("I am at 3rd level");
-		});*/
-
-		//System.out.println(listofMap);
 		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
 		String result = SquigglyUtils.stringify(objectMapper, listofMap);
 
@@ -140,17 +128,15 @@ public class ReportController {
 		JSONArray output;
 		output = new JSONArray(result);
         System.out.println("sdfksbf");
-
-        File file=new File("C:/Users/hp/Desktop/tmp2/fromJSON2.csv");
+        String file_name = sign_no + "_" + JsonUtils.FileNameDate()+".csv";
+        File file=new File(StringConstants.FILE_PATH_DOWNLOAD_LOCAL + file_name);
         System.out.println("jasvdjvsdkv");
         String csv = CDL.toString(output);
         FileUtils.writeStringToFile(file, csv);
 
 		System.out.println("Inside second loop where records are greater than 6000 ==== FINAL");
 		
-		
-		
-		return "login";
+		return fileDownloadController.downloadPDFResource(res, rep, file_name);
 
 	}
 }
