@@ -982,7 +982,8 @@
     </table> -->
     <div>
     	<label>Export Data To :</label><a href="/reportExport" class="btn btn-default" >Excel</a> &nbsp; &nbsp; &nbsp;
-    	<a href="/reportExportLocal" class="btn btn-default" >CSV</a>
+    	<a href="/reportExportLocal" class="btn btn-default" >CSV</a> &nbsp; &nbsp; &nbsp;
+    	<a href="/reportExportPDF" class="btn btn-default" >PDF</a>
     	
     </div>
 </div>

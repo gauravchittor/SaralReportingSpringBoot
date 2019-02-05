@@ -1,7 +1,6 @@
 package com.saral.reporting.view;
 
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +13,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.web.servlet.view.document.AbstractXlsView;
 
-import com.saral.reporting.model.ApplInfoJson;
-
 public class ExcelViewReport extends AbstractXlsView {
 
 	@Override
@@ -24,7 +21,7 @@ public class ExcelViewReport extends AbstractXlsView {
 
 		response.setHeader("Content-Disposition", "attachment; filename=\"reportfile.xls\"");
 
-		@SuppressWarnings("unchecked")
+		
 		// List<ApplInfoJson> appInfJsns = (List<ApplInfoJson>)
 		// model.get("applInfoJsonForExcel");
 
@@ -33,6 +30,7 @@ public class ExcelViewReport extends AbstractXlsView {
 		Row header = sheet.createRow(0);
 		
 		JSONObject json = output.getJSONObject(0);
+		@SuppressWarnings("unchecked")
 		Iterator<String> keys = json.keys();
 		int i = 0;
 		while (keys.hasNext()) {
@@ -48,33 +46,24 @@ public class ExcelViewReport extends AbstractXlsView {
 		for (int j = 0; j < output.length(); j++) {
 			Row jsnRow = sheet.createRow(rowCount++);
 		    JSONObject json2 = output.getJSONObject(j);
-		    Iterator<String> keys2 = json.keys();
+		    @SuppressWarnings("unchecked")
+			Iterator<String> keys2 = json2.keys();
 
 		    int k = 0;
 		    while (keys2.hasNext()) {
 		        String key2 = keys2.next();
-		        String val = (String) json2.get(key2);
-		        jsnRow.createCell(k).setCellValue(val);
+		        Object val = json2.get(key2);
+		        jsnRow.createCell(k).setCellValue(val.toString());
 		        k++;
 		    }
-
 		}
 		
-		/*header.createCell(0).setCellValue("aid");
-		header.createCell(1).setCellValue("appl_info");
-		header.createCell(2).setCellValue("application_form_attributes");
-		header.createCell(3).setCellValue("enclosure_data");
-		header.createCell(4).setCellValue("service_id");*/
-
-	/*	int rowCount = 1;
-		System.out.println("I am here one two three");
-		for (ApplInfoJson appInfJsn : appInfJsns) {
-			Row jsnRow = sheet.createRow(rowCount++);
-			jsnRow.createCell(0).setCellValue(appInfJsn.getAid());
-			jsnRow.createCell(1).setCellValue(appInfJsn.getApplInfo());
-			jsnRow.createCell(2).setCellValue(appInfJsn.getApplicationFormAttributes());
-			jsnRow.createCell(3).setCellValue(appInfJsn.getEnclosureData());
-			jsnRow.createCell(4).setCellValue(appInfJsn.getServiceId());
-		}*/
+		//workbook.save("FinancialKPI.pdf", SaveFileFormat.Pdf);	
+		
+		/*ExcelDocument excelDoc = new ExcelDocument("input.xlsx", new ExcelConvertOptions());
+		 
+		// Save the document as a PDF file
+		excelDoc.saveAsPDF("output.pdf");*/
+		
 	}
 }
