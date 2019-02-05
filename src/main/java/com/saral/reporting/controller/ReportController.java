@@ -50,7 +50,7 @@ public class ReportController {
 	@Autowired
 	FileDownloadController fileDownloadController;
 	
-	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
+/*	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
 	public ModelAndView mainListReport(HttpServletRequest res, HttpServletResponse rep){
 		
 		Long repId = (Long) res.getSession().getAttribute("reportId");
@@ -59,10 +59,70 @@ public class ReportController {
 		System.out.println("Service id and report id is:" + servID + " And " + repId );
 		return new ModelAndView(new ExcelViewReport(), "applInfoJsonForExcel", applInfoJson);
 		
+	}*/
+	
+	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
+	public ModelAndView mainListReportExcel(HttpServletRequest res, HttpServletResponse rep){
+		
+		Long repId = (Long) res.getSession().getAttribute("reportId");
+		Long servID = (Long) res.getSession().getAttribute("service_id");
+		List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceIdForExcel(servID);
+		List<Map<String, Object>> listofMap = new ArrayList<>();
+		ReportBean listReport = reportBeanService.findByReportId(repId);
+		List<ReportSelectColumn> L1 = listReport.getReportSelectColumnList();
+		StringBuilder initCol = new StringBuilder();
+		StringBuilder servCol = new StringBuilder();
+		
+		L1.forEach((temp1) -> {
+			if (temp1.getStatus().equals('I')) {
+				initCol.append(temp1.getReportSelectedColumnName());
+				initCol.append(",");
+			} else {
+				servCol.append(temp1.getReportSelectedColumnId());
+				servCol.append(",");
+			}
+		});
+		
+		String initColL = initCol.substring(0, initCol.length() - 1);
+		String servColL = servCol.substring(0, servCol.length() - 1);
+		StringJoiner joiner = new StringJoiner(",");
+		joiner.add(initColL).add(servColL);
+		//System.out.println("I am at 1st level" + applInfoJson);
+		System.out.println("I am at 2nd asdasdsd level");
+		
+		for(ApplInfoJson temp : applInfoJson){
+			Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
+			// map attributes in map
+			Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
+			// merging map
+			Map<String, Object> mapFromString = new LinkedHashMap<>();
+			mapFromString.putAll(mapInit);
+			mapFromString.putAll(mapAttr);
+			listofMap.add(mapFromString);
+		}
+		
+		System.out.println("I am at 3rd level");
+		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
+		String result = SquigglyUtils.stringify(objectMapper, listofMap);
+		System.out.println("I am at 4th level squiggly");
+		
+		for (ReportSelectColumn s : L1) {
+			result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
+		}
+		
+		System.out.println("I am at 5th level updated record");
+		JSONArray output;
+		output = new JSONArray(result);
+        System.out.println("sdfksbf");
+		
+		//List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceIdForExcel(servID);
+		//System.out.println("Service id and report id is:" + servID + " And " + repId );
+		return new ModelAndView(new ExcelViewReport(), "applInfoJsonForExcel", output);
+		
 	}
 	
 	@RequestMapping(value="/reportExportLocal", method=RequestMethod.GET)
-	public String mainListReportLocal(ModelMap model, HttpServletRequest res, HttpServletResponse rep) throws IOException{
+	public void mainListReportLocal(ModelMap model, HttpServletRequest res, HttpServletResponse rep) throws IOException{
 		
 		Long repId = (Long) res.getSession().getAttribute("reportId");
 		Long servID = (Long) res.getSession().getAttribute("service_id");
@@ -136,7 +196,7 @@ public class ReportController {
 
 		System.out.println("Inside second loop where records are greater than 6000 ==== FINAL");
 		
-		return fileDownloadController.downloadPDFResource(res, rep, file_name);
+		fileDownloadController.downloadPDFResource(res, rep, file_name);
 
 	}
 }

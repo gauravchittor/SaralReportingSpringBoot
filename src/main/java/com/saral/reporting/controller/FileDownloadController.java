@@ -24,7 +24,7 @@ public class FileDownloadController {
 	private static final String EXTERNAL_FILE_PATH = StringConstants.FILE_PATH_DOWNLOAD_LOCAL;
 
 	@RequestMapping("/file/{fileName:.+}")
-	public String downloadPDFResource(HttpServletRequest request, HttpServletResponse response,
+	public void downloadPDFResource(HttpServletRequest request, HttpServletResponse response,
 			@PathVariable("fileName") String fileName) throws IOException {
 
 		File file = new File(EXTERNAL_FILE_PATH + fileName);
@@ -67,6 +67,5 @@ public class FileDownloadController {
 
 			
 		}
-		return "Success";
 	}
 }
