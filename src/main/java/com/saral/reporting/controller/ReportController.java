@@ -32,6 +32,7 @@ import com.saral.reporting.service.ApplInfoJsonService;
 import com.saral.reporting.service.ReportBeanService;
 import com.saral.reporting.utils.JsonUtils;
 import com.saral.reporting.utils.StringConstants;
+import com.saral.reporting.view.CsvView;
 import com.saral.reporting.view.ExcelViewReport;
 import com.saral.reporting.view.PdfView;
 
@@ -48,7 +49,9 @@ public class ReportController {
 	@Autowired
 	FileDownloadController fileDownloadController;
 	
-/*	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
+/*	Code to export complete table
+ * 
+ * @RequestMapping(value="/reportExport", method=RequestMethod.GET)
 	public ModelAndView mainListReport(HttpServletRequest res, HttpServletResponse rep){
 		
 		Long repId = (Long) res.getSession().getAttribute("reportId");
@@ -59,6 +62,8 @@ public class ReportController {
 		
 	}*/
 	
+	
+	//code for export to excel
 	@RequestMapping(value="/reportExport", method=RequestMethod.GET)
 	public ModelAndView mainListReportExcel(HttpServletRequest res, HttpServletResponse rep){
 		
@@ -85,7 +90,7 @@ public class ReportController {
 		String servColL = servCol.substring(0, servCol.length() - 1);
 		StringJoiner joiner = new StringJoiner(",");
 		joiner.add(initColL).add(servColL);
-		//System.out.println("I am at 1st level" + applInfoJson);
+		
 		System.out.println("I am at 2nd asdasdsd level");
 		
 		for(ApplInfoJson temp : applInfoJson){
@@ -117,6 +122,7 @@ public class ReportController {
 		
 	}
 	
+	//code for export to pdf
 	@RequestMapping(value="/reportExportPDF", method=RequestMethod.GET)
 	public ModelAndView mainListReportPDF(HttpServletRequest res, HttpServletResponse rep){
 		
@@ -143,7 +149,7 @@ public class ReportController {
 		String servColL = servCol.substring(0, servCol.length() - 1);
 		StringJoiner joiner = new StringJoiner(",");
 		joiner.add(initColL).add(servColL);
-		//System.out.println("I am at 1st level" + applInfoJson);
+		
 		System.out.println("I am at 2nd asdasdsd level");
 		
 		for(ApplInfoJson temp : applInfoJson){
@@ -171,9 +177,69 @@ public class ReportController {
 		output = new JSONArray(result);
         System.out.println("sdfksbf");
 		
-		return new ModelAndView(new PdfView(), "applInfoJsonForExcel", output);
+		return new ModelAndView(new PdfView(), "applInfoJsonForPDF", output);
 	}
 	
+	//code for export to csv
+	@RequestMapping(value="/reportExportCSV", method=RequestMethod.GET)
+	public ModelAndView mainListReportCSV(HttpServletRequest res, HttpServletResponse rep){
+		
+		Long repId = (Long) res.getSession().getAttribute("reportId");
+		Long servID = (Long) res.getSession().getAttribute("service_id");
+		List<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceIdForExcel(servID);
+		List<Map<String, Object>> listofMap = new ArrayList<>();
+		ReportBean listReport = reportBeanService.findByReportId(repId);
+		List<ReportSelectColumn> L1 = listReport.getReportSelectColumnList();
+		StringBuilder initCol = new StringBuilder();
+		StringBuilder servCol = new StringBuilder();
+		
+		L1.forEach((temp1) -> {
+			if (temp1.getStatus().equals('I')) {
+				initCol.append(temp1.getReportSelectedColumnName());
+				initCol.append(",");
+			} else {
+				servCol.append(temp1.getReportSelectedColumnId());
+				servCol.append(",");
+			}
+		});
+		
+		String initColL = initCol.substring(0, initCol.length() - 1);
+		String servColL = servCol.substring(0, servCol.length() - 1);
+		StringJoiner joiner = new StringJoiner(",");
+		joiner.add(initColL).add(servColL);
+		
+		System.out.println("I am at 2nd asdasdsd level");
+		
+		for(ApplInfoJson temp : applInfoJson){
+			Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
+			// map attributes in map
+			Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
+			// merging map
+			Map<String, Object> mapFromString = new LinkedHashMap<>();
+			mapFromString.putAll(mapInit);
+			mapFromString.putAll(mapAttr);
+			listofMap.add(mapFromString);
+		}
+		
+		System.out.println("I am at 3rd level");
+		ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
+		String result = SquigglyUtils.stringify(objectMapper, listofMap);
+		System.out.println("I am at 4th level squiggly");
+		
+		for (ReportSelectColumn s : L1) {
+			result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
+		}
+		
+		System.out.println("I am at 5th level updated record");
+		JSONArray output;
+		output = new JSONArray(result);
+        System.out.println("sdfksbf");
+		
+		return new ModelAndView(new CsvView(), "applInfoJsonForCSV", output);
+	}
+	
+	
+	//code for saving file to local and then send to client
 	@RequestMapping(value="/reportExportLocal", method=RequestMethod.GET)
 	public void mainListReportLocal(ModelMap model, HttpServletRequest res, HttpServletResponse rep) throws IOException, DocumentException{
 		
@@ -240,9 +306,6 @@ public class ReportController {
 		
 		JSONArray output;
 		output = new JSONArray(result);
-		
-		/*File file = PDFGenerator.jsonTopdf(output);
-		System.out.println("File"+file.getAbsolutePath());*/
 		
         System.out.println("sdfksbf");
         String file_name = sign_no + "_" + JsonUtils.FileNameDate()+".csv";

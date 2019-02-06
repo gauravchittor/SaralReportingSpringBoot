@@ -38,11 +38,7 @@ import com.saral.reporting.service.WhereFunctionsService;
 
 @Transactional
 @Controller
-/*@SessionAttributes({ "sign_no", "user_id", "user_name", "hm", "department_level_name", "department_id",
-		"designation_id", "designation_name" })*/
 public class DesignReportController {
-	
-	//private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
 	@PersistenceContext
 	private EntityManager manager;
@@ -100,10 +96,6 @@ public class DesignReportController {
 		System.out.println(action1);
 		if (action.equals("fetchColumns")) {
 			System.out.println("In side fetch columns");
-			/*List<AttributeMasterData> list = attributeMasterDataService.findByTaskid(serviceid);
-			Map<String, String> mapColList = new HashMap<String, String>();
-			for (AttributeMasterData i : list)
-				mapColList.put(i.getAttributeId(), i.getAttributeLabel());*/
 			
 			List<AttributeMasterDataSql> list = attributeMasterDataSqlService.findByBaseServiceID(serviceid);
 			Map<Long, String> mapColList = new HashMap<Long, String>();
