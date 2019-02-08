@@ -110,7 +110,7 @@ public class DesignReportController {
 		return (ResponseEntity<?>) ResponseEntity.ok();
 	}
 	
-	//To fetch ApplInfo Column Name
+	//To fetch Appl Info Column Name
 	@RequestMapping(value = "/fetchApplInfoCol", method = { RequestMethod.POST }, produces = "application/json;charset=UTF-8")
 	public ResponseEntity<?> showApplInfoCol(ModelMap model, HttpServletRequest request)
 			throws ServletException, IOException {
