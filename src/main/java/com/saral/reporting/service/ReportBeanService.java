@@ -14,4 +14,6 @@ public interface ReportBeanService {
 	
 	void deleteReportBean(Long reportId);
 
+	List<ReportBean> findByDepartmentId(Long department_id);
+
 }

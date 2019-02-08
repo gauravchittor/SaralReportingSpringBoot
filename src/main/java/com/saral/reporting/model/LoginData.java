@@ -65,40 +65,40 @@ public class LoginData {
 	private Date lastMdfdDate;
 
 	@Column(name = "user_id") // timestamp without time zone,
-	private Integer userId;
+	private Long userId;
 
 	@Column(name = "location_type_id")
-	private Integer locationTypeId;
+	private Long locationTypeId;
 
 	@Column(name = "location_id")
-	private Integer locationId;
+	private Long locationId;
 
 	@Column(name = "state_id")
-	private Integer stateId;
+	private Long stateId;
 
 	@Column(name = "location_type_flag")
 	private Character locationTypeFlag;
 
 	@Column(name = "zila_parisad")
-	private Integer zilaParisad;
+	private Long zilaParisad;
 
 	@Column(name = "panchayat_samiti")
-	private Integer panchayatSamiti;
+	private Long panchayatSamiti;
 
 	@Column(name = "gram_panchayat")
-	private Integer gramPanchayat;
+	private Long gramPanchayat;
 
 	@Column(name = "corporation")
-	private Integer corporation;
+	private Long corporation;
 
 	@Column(name = "municipality")
-	private Integer municipality;
+	private Long municipality;
 
 	@Column(name = "spdi_created_by")
-	private Integer spdiCreatedBy;
+	private Long spdiCreatedBy;
 
 	@Column(name = "spdi_status")
-	private Integer spdiStatus;
+	private Long spdiStatus;
 
 	@Column(name = "spdv_location_name")
 	private String spdvLocationName;
@@ -250,35 +250,35 @@ public class LoginData {
 		this.lastMdfdDate = lastMdfdDate;
 	}
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
-	public Integer getLocationTypeId() {
+	public Long getLocationTypeId() {
 		return locationTypeId;
 	}
 
-	public void setLocationTypeId(Integer locationTypeId) {
+	public void setLocationTypeId(Long locationTypeId) {
 		this.locationTypeId = locationTypeId;
 	}
 
-	public Integer getLocationId() {
+	public Long getLocationId() {
 		return locationId;
 	}
 
-	public void setLocationId(Integer locationId) {
+	public void setLocationId(Long locationId) {
 		this.locationId = locationId;
 	}
 
-	public Integer getStateId() {
+	public Long getStateId() {
 		return stateId;
 	}
 
-	public void setStateId(Integer stateId) {
+	public void setStateId(Long stateId) {
 		this.stateId = stateId;
 	}
 
@@ -290,59 +290,59 @@ public class LoginData {
 		this.locationTypeFlag = locationTypeFlag;
 	}
 
-	public Integer getZilaParisad() {
+	public Long getZilaParisad() {
 		return zilaParisad;
 	}
 
-	public void setZilaParisad(Integer zilaParisad) {
+	public void setZilaParisad(Long zilaParisad) {
 		this.zilaParisad = zilaParisad;
 	}
 
-	public Integer getPanchayatSamiti() {
+	public Long getPanchayatSamiti() {
 		return panchayatSamiti;
 	}
 
-	public void setPanchayatSamiti(Integer panchayatSamiti) {
+	public void setPanchayatSamiti(Long panchayatSamiti) {
 		this.panchayatSamiti = panchayatSamiti;
 	}
 
-	public Integer getGramPanchayat() {
+	public Long getGramPanchayat() {
 		return gramPanchayat;
 	}
 
-	public void setGramPanchayat(Integer gramPanchayat) {
+	public void setGramPanchayat(Long gramPanchayat) {
 		this.gramPanchayat = gramPanchayat;
 	}
 
-	public Integer getCorporation() {
+	public Long getCorporation() {
 		return corporation;
 	}
 
-	public void setCorporation(Integer corporation) {
+	public void setCorporation(Long corporation) {
 		this.corporation = corporation;
 	}
 
-	public Integer getMunicipality() {
+	public Long getMunicipality() {
 		return municipality;
 	}
 
-	public void setMunicipality(Integer municipality) {
+	public void setMunicipality(Long municipality) {
 		this.municipality = municipality;
 	}
 
-	public Integer getSpdiCreatedBy() {
+	public Long getSpdiCreatedBy() {
 		return spdiCreatedBy;
 	}
 
-	public void setSpdiCreatedBy(Integer spdiCreatedBy) {
+	public void setSpdiCreatedBy(Long spdiCreatedBy) {
 		this.spdiCreatedBy = spdiCreatedBy;
 	}
 
-	public Integer getSpdiStatus() {
+	public Long getSpdiStatus() {
 		return spdiStatus;
 	}
 
-	public void setSpdiStatus(Integer spdiStatus) {
+	public void setSpdiStatus(Long spdiStatus) {
 		this.spdiStatus = spdiStatus;
 	}
 

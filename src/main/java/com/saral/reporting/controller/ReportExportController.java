@@ -38,7 +38,7 @@ import com.saral.reporting.view.PdfView;
 
 @Controller
 @RequestMapping(value="/")
-public class ReportController {
+public class ReportExportController {
 	
 	@Autowired
 	ApplInfoJsonService applInfoJsonService;

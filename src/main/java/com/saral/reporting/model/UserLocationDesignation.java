@@ -14,30 +14,30 @@ public class UserLocationDesignation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="user_loc_desig_id")
-	private Integer userLocDesigId;
+	private Long userLocDesigId;
 	
 	@Column(name="designation_id")
-	private Integer designationId;
+	private Long designationId;
 	
 	@Column(name="designation_name")
 	private String designationName;
 	
 	@Column(name="user_loc_id")
-	private Integer userLocId;
+	private Long userLocId;
 
-	public Integer getUserLocDesigId() {
+	public Long getUserLocDesigId() {
 		return userLocDesigId;
 	}
 
-	public void setUserLocDesigId(Integer userLocDesigId) {
+	public void setUserLocDesigId(Long userLocDesigId) {
 		this.userLocDesigId = userLocDesigId;
 	}
 
-	public Integer getDesignationId() {
+	public Long getDesignationId() {
 		return designationId;
 	}
 
-	public void setDesignationId(Integer designationId) {
+	public void setDesignationId(Long designationId) {
 		this.designationId = designationId;
 	}
 
@@ -49,11 +49,11 @@ public class UserLocationDesignation {
 		this.designationName = designationName;
 	}
 
-	public Integer getUserLocId() {
+	public Long getUserLocId() {
 		return userLocId;
 	}
 
-	public void setUserLocId(Integer userLocId) {
+	public void setUserLocId(Long userLocId) {
 		this.userLocId = userLocId;
 	}
 

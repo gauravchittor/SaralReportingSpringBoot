@@ -14,71 +14,71 @@ public class UserLocation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="user_loc_id")
-	private Integer userLocId;
+	private Long userLocId;
 	
 	@Column(name="user_id")
-	private Integer userId;
+	private Long userId;
 	
 	@Column(name="location_id")
-	private Integer locationId;
+	private Long locationId;
 	
 	@Column(name="location_type_id")
-	private Integer locationTypeId;
+	private Long locationTypeId;
 	
 	@Column(name="department_id")
-	private Integer departmentId;
+	private Long departmentId;
 	
 	@Column(name="department_level_id")
-	private Integer departmentLevelId;
+	private Long departmentLevelId;
 	
 	@Column(name="department_level_name")
 	private String departmentLevelName;
 
-	public Integer getUserLocId() {
+	public Long getUserLocId() {
 		return userLocId;
 	}
 
-	public void setUserLocId(Integer userLocId) {
+	public void setUserLocId(Long userLocId) {
 		this.userLocId = userLocId;
 	}
 
-	public Integer getUserId() {
+	public Long getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Integer userId) {
+	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
 
-	public Integer getLocationId() {
+	public Long getLocationId() {
 		return locationId;
 	}
 
-	public void setLocationId(Integer locationId) {
+	public void setLocationId(Long locationId) {
 		this.locationId = locationId;
 	}
 
-	public Integer getLocationTypeId() {
+	public Long getLocationTypeId() {
 		return locationTypeId;
 	}
 
-	public void setLocationTypeId(Integer locationTypeId) {
+	public void setLocationTypeId(Long locationTypeId) {
 		this.locationTypeId = locationTypeId;
 	}
 
-	public Integer getDepartmentId() {
+	public Long getDepartmentId() {
 		return departmentId;
 	}
 
-	public void setDepartmentId(Integer departmentId) {
+	public void setDepartmentId(Long departmentId) {
 		this.departmentId = departmentId;
 	}
 
-	public Integer getDepartmentLevelId() {
+	public Long getDepartmentLevelId() {
 		return departmentLevelId;
 	}
 
-	public void setDepartmentLevelId(Integer departmentLevelId) {
+	public void setDepartmentLevelId(Long departmentLevelId) {
 		this.departmentLevelId = departmentLevelId;
 	}
 

@@ -17,7 +17,7 @@ public class RoleMaster {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="role_id")
-	private Integer roleId;
+	private Long roleId;
 	
 	@Column(name="role_name")
 	private String roleName;
@@ -25,11 +25,11 @@ public class RoleMaster {
 	@Column(name="sign_role")
 	private String signRole;
 
-	public Integer getRoleId() {
+	public Long getRoleId() {
 		return roleId;
 	}
 
-	public void setRoleId(Integer roleId) {
+	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
 	}
 

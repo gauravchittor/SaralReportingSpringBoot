@@ -39,4 +39,10 @@ public class ReportBeanServiceImpl implements ReportBeanService {
 		// TODO Auto-generated method stub
 		reportBeanRepository.deleteByReportId(reportId);
 	}
+
+	@Override
+	public List<ReportBean> findByDepartmentId(Long department_id) {
+		// TODO Auto-generated method stub
+		return reportBeanRepository.findByDepartmentId(department_id);
+	}
 }

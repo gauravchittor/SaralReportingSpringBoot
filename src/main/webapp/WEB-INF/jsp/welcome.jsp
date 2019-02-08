@@ -76,7 +76,7 @@
 								class="menu-icon fa fa-caret-right"></i> View Reports
 						</a> <b class="arrow"></b></li> -->
 						
-						<li class=""><a href="/fetchReportName?sign_no=${sign_no}"> 
+						<li class=""><a href="/fetchReportsName"> 
 						<i class="menu-icon fa fa-caret-right"></i> Update Reports
 						</a> <b class="arrow"></b></li>
 					</ul>
@@ -480,9 +480,9 @@
 									<i class="ace-icon fa fa-times"></i>
 								</button>
 
-								<i class="ace-icon fa fa-check green"></i> Welcome to <strong
+								<i class="ace-icon fa fa-check green"></i> Welcome ${user_name} to <strong
 									class="green"> Saral Haryana <small>(v1.0)</small>
-								</strong>, Report Designer.
+								</strong>, Report Designer. 
 							</div>
 
 

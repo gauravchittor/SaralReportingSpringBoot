@@ -22,11 +22,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import com.google.gson.Gson;
 import com.saral.reporting.DAO.LoginDAO;
+import com.saral.reporting.model.HrOrgUnits;
 
 @Transactional
 @Controller
 @SessionAttributes({ "sign_no", "user_id", "user_name", "hm", "department_level_name", "department_id",
-		"designation_id", "designation_name" })
+		"designation_id", "designation_name","location_Id" })
 public class LoginController {
 
 //	private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
@@ -72,21 +73,20 @@ public class LoginController {
 		System.out.println(getPrincipal());
 		String sign_no = getPrincipal();
 		List<Object[]> values = loginDAO.getUserInfo(sign_no);
-		loginDAO.testSelectJsonbEntity();
-
 		Object[] l1 = values.get(0);
 
 		String sign_no1 = (String) l1[0];
-		Integer user_id = (Integer) l1[1];
+		Long user_id = (Long) l1[1];
 		String user_name = (String) l1[2];
 		String department_level_name = (String) l1[5];
-		Integer department_id = (Integer) l1[6];
-		Integer designation_id = (Integer) l1[7];
+		Long department_id = (Long) l1[6];
+		Long designation_id = (Long) l1[7];
 		String designation_name = (String) l1[8];
-		HashMap<Integer, String> hm = new HashMap<>();
+		Long location_Id = (Long) l1[11];
+		HashMap<Long, String> hm = new HashMap<>();
 
 		for (Object[] result : values) {
-			Integer role_id = (Integer) result[3];
+			Long role_id = (Long) result[3];
 			String role_name = (String) result[4];
 			hm.put(role_id, role_name);
 		}
@@ -102,7 +102,11 @@ public class LoginController {
 		model.put("designation_id", designation_id);
 		model.put("designation_name", designation_name);
 		model.put("hm", json);
+		model.put("location_Id", location_Id);
 
+		List<HrOrgUnits> vas = loginDAO.testSelectJsonbEntity(location_Id);
+		
+		
 		return "welcome";
 
 	}

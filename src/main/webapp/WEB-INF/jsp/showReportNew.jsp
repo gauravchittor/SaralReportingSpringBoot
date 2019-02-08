@@ -233,7 +233,7 @@
 								</a>
 								<b class="arrow"></b>
 							</li> -->
-						<li class=""><a href="/fetchReportName?sign_no=${sign_no}">
+						<li class=""><a href="/fetchReportsName">
 								<i class="menu-icon fa fa-caret-right"></i> Update Reports
 						</a> <b class="arrow"></b></li>
 					</ul></li>

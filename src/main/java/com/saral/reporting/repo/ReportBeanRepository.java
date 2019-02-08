@@ -14,4 +14,6 @@ public interface ReportBeanRepository extends JpaRepository<ReportBean, Long> {
 	
 	void deleteByReportId(Long reportId);
 
+	List<ReportBean> findByDepartmentId(Long department_id);
+
 }

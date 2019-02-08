@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,14 +18,10 @@ import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.support.PagedListHolder;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.ServletRequestUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,9 +31,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.bohnman.squiggly.Squiggly;
 import com.github.bohnman.squiggly.util.SquigglyUtils;
 import com.saral.reporting.model.ApplInfoJson;
+import com.saral.reporting.model.HrOrgUnits;
 import com.saral.reporting.model.ReportBean;
 import com.saral.reporting.model.ReportSelectColumn;
 import com.saral.reporting.service.ApplInfoJsonService;
+import com.saral.reporting.service.HrOrgUnitsService;
 import com.saral.reporting.service.ReportBeanService;
 import com.saral.reporting.utils.JsonUtils;
 
@@ -53,6 +52,9 @@ public class ViewReportController {
 	@Autowired
 	ApplInfoJsonService applInfoJsonService;
 
+	@Autowired
+	HrOrgUnitsService hrOrgUnitsService;
+	
 	@PersistenceContext
 	private EntityManager manager;
 
@@ -60,7 +62,14 @@ public class ViewReportController {
 	public String reportViewPage(ModelMap model, HttpServletRequest request)
 			throws ServletException, IOException {
 		String sign_no = (String) request.getSession().getAttribute("sign_no");
-		List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);
+		Long department_id = (Long) request.getSession().getAttribute("department_id");
+		
+		//this is to find list on the basis of sign_no
+		//List<ReportBean> listReport = reportBeanService.findBySignNo(sign_no);  
+		
+		//this is to find list on the basis of department_id
+		List<ReportBean> listReport = reportBeanService.findByDepartmentId(department_id); 
+		
 		PagedListHolder<ReportBean> pagedListHolder = new PagedListHolder<ReportBean>(listReport);
 		int page = ServletRequestUtils.getIntParameter(request, "p", 0);
 		pagedListHolder.setPage(page);
@@ -72,7 +81,6 @@ public class ViewReportController {
 	}
 
 	@RequestMapping(value = { "/viewSelectedReport" }, method = RequestMethod.GET)
-	//@GetMapping("/viewSelectedReport")
 	public String reportSelectedReport(ModelMap model, Pageable pageable, @RequestParam String reportId,
 			@RequestParam String service_id, HttpServletRequest request)
 			throws ServletException, IOException, ParseException {
@@ -103,12 +111,12 @@ public class ViewReportController {
 
 	
 	@RequestMapping(value = { "/viewSelectedReportData" }, method = RequestMethod.GET)
-	//@GetMapping("/viewSelectedReport")
 	public String reportSelectedReportShow(ModelMap model, Pageable pageable, HttpServletRequest request)
 			throws ServletException, IOException, ParseException {
 		System.out.println();
 		Long repId = (Long) request.getSession().getAttribute("reportId");
 		Long servID = (Long) request.getSession().getAttribute("service_id");
+		Long locationId = (Long) request.getSession().getAttribute("location_Id");
 		
 		List<Map<String, Object>> listofMap = new ArrayList<>();
 		
@@ -134,7 +142,6 @@ public class ViewReportController {
 		joiner.add(initColL).add(servColL);
 
 		// Find data from Json tables on the basis of Service ID
-		//Long servID = Long.parseLong(service_id);
 		Long totalRecords = applInfoJsonService.countByServiceId(servID);
 		int totalPages = (int) (totalRecords / 150);
 		int resultTP = (int) (totalRecords % 150);
@@ -144,43 +151,6 @@ public class ViewReportController {
 	        }
 		model.put("totalPages", totalPages);
 
-		/*if (totalRecords <= 6000L) {
-			//Sort sort = new Sort(new Sort.Order(Direction.ASC, "aid"));
-			//pageable = new PageRequest(0, 6000, sort);
-			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
-
-			// Fetch applInfoNode from List
-
-			applInfoJson.forEach((temp) -> {
-				// map applinfo in map
-				Map<String, Object> mapInit = JsonUtils.getMapFromString(temp.getApplInfo());
-				// map attributes in map
-				Map<String, Object> mapAttr = JsonUtils.getMapFromString(temp.getApplicationFormAttributes());
-
-				// merging map
-				Map<String, Object> mapFromString = new LinkedHashMap<>();
-				mapFromString.putAll(mapInit);
-				mapFromString.putAll(mapAttr);
-				System.out.println("Program is in first loop where records are less than 6000");
-				listofMap.add(mapFromString);
-
-			});
-
-			ObjectMapper objectMapper = Squiggly.init(new ObjectMapper(), joiner.toString());
-			String result = SquigglyUtils.stringify(objectMapper, listofMap);
-
-			for (ReportSelectColumn s : L1) {
-				result = result.replace(s.getReportSelectedColumnId(), s.getReportSelectedColumnName());
-			}
-			model.put("applInfoJson", result);
-			model.put("reportId", repId);
-			model.put("service_id", servID);
-			
-			model.addAttribute("addresses", result);
-			JsonUtils.pageModel(model, applInfoJson);
-			
-			return "showReportNew";
-		} else */
 			Page<ApplInfoJson> applInfoJson = applInfoJsonService.findByServiceId(servID, pageable);
 			System.out.println(applInfoJson);
 
@@ -221,6 +191,21 @@ public class ViewReportController {
 			model.put("size", size);
 			System.out.println("number" + pNumber);
 			System.out.println("size" + size);
+			
+			/*
+			 * Code for fetching org_unit_code on the basis of location_id
+			 *And finding the org_unit_code for child of location_id
+			 */
+			//uncomment this line to add both list. do it before launch
+			//l1.addAll(l2);
+			List<HrOrgUnits> l1 = hrOrgUnitsService.findByOrgUnitCode(locationId);
+			List<HrOrgUnits> l2 = hrOrgUnitsService.findByParentOrgUnitCode(locationId);
+			System.out.println("list l1" + l1);
+			System.out.println("Size of l1" + l1.size());
+			System.out.println("list l2" + l2);
+			System.out.println("Size l2" + l2.size());
+			List<Long> field1List = l1.stream().map(urEntity -> urEntity.getOrgUnitCode()).collect(Collectors.toList());
+			System.out.println("Converted List is :" + field1List);
 			return "showReportNew";
 		
 	}
