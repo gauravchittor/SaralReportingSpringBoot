@@ -177,8 +177,8 @@ public class DesignReportController {
 		reportBean.setVersionNo(0L); // need to get front end
 		reportBean.setDesignationId(111L); // need to get front end
 		reportBean.setTooltip(request.getParameter("tooltip"));
-		org.json.simple.JSONArray whrclsJSON =reportBean.jsonManipulateWhere(request.getParameter("whrclsJSON"));
-		reportBean.setWhereCondition(whrclsJSON.toString());
+		//org.json.simple.JSONArray whrclsJSON =reportBean.jsonManipulateWhere(request.getParameter("whrclsJSON"));
+		reportBean.setWhereCondition((request.getParameter("whrclsJSON")));
 		/* report.setGrouping(request.getParameter("rpGrpBy")); */
 		String grpby = request.getParameter("grpIdName");
 		if (grpby.equals("0")||(grpby==null)) {

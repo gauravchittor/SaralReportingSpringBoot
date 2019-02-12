@@ -999,7 +999,7 @@
 	    				},
 	    				contentType : 'application/json',
 	    				success : function(responseJson) {
-	    					console.log(responseJson);
+	    					//console.log(responseJson);
 	    					 $("#reprt2").show();
 	    					 var $select = $("#selectedRecord");                         
 	    				        $select.find("option").remove();
@@ -1015,6 +1015,8 @@
 	    			 var sid = $('#selectedRecord').val();
 	    			 if(sid=="0" || sid==""){
 	    				 alert("Please select Service from drop-down");
+	    				 $("#selcol1").hide();
+	    				 $("#selcol").hide();
 	    				 return false;
 	    			 }
 	    			$.ajax({
@@ -1027,7 +1029,8 @@
 	    				},
 	    				success : function(responseJson1) {
 	    					$("#selcol").show();
-	    					console.log(responseJson1);
+	    					$("#selcol1").show();
+	    					//console.log(responseJson1);
 	    					$('#ContentPlaceHolder1_CheckBoxList1').empty();
 	    						   $.each(responseJson1, function(key, value) {               
 	    				            /*  $('#ContentPlaceHolder1_CheckBoxList1').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>'); */
@@ -1050,7 +1053,7 @@
 	    				data : {},
 	    				success : function(responseJsonWhere) {
 	    					//$("#selcol").show();
-	    					console.log(responseJsonWhere);
+	    					//console.log(responseJsonWhere);
 	    					//$('#rpWhrCondition').empty();
 	    						   $.each(responseJsonWhere, function(key, value) {               
 	    				            /*  $('#ContentPlaceHolder1_CheckBoxList1').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>'); */
@@ -1073,7 +1076,7 @@
 	    				data : {},
 	    				success : function(responseJsonHvng) {
 	    					//$("#selcol").show();
-	    					console.log(responseJsonHvng);
+	    					//console.log(responseJsonHvng);
 	    					//$('#rphvngCondition').empty();
 	    						   $.each(responseJsonHvng, function(key, value) {               
 	    				            /*  $('#ContentPlaceHolder1_CheckBoxList1').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>'); */
@@ -1095,8 +1098,8 @@
 	    				url : '/fetchApplInfoCol',
 	    				data : {},
 	    				success : function(responseJsonAppInfoCol) {
-	    					$("#selcol1").show();
-	    					console.log(responseJsonAppInfoCol);
+	    					
+	    					//console.log(responseJsonAppInfoCol);
 	    					$('#ContentPlaceHolder2_CheckBoxList2').empty();
 	    						   $.each(responseJsonAppInfoCol, function(key, value) {               
 	    				              //	$('#ContentPlaceHolder2_CheckBoxList2').append('<input name="colmn" type="checkbox" value="'+ key +'"/> '+ value +'<br/>');
@@ -1119,10 +1122,9 @@
 		                url: "/SaveReport",
 		                data: $(this).serialize(),
 						success:function(result){
-							console.log("My ajax 1");
-							console.log(result);
+							//console.log("My ajax 1");
+							//console.log(result);
 							 $('#customDesign').text(result);
-							 console.log("My ajax");
 							 e.preventDefault();
 						}
 		            });
@@ -1265,7 +1267,7 @@
 		    	}else if(titelliste=="" && titellisteB!=""){
 		    		var o = b;
 		    	}
-		    	console.log(o);
+		    	//console.log(o);
 		    	$('#rpGrpBy, #rpGrpBy2, #rpGrpBy3').empty();
 		    	//$('#rpGrpBy2').empty();
 		    	var newOption1 = $('<option/>');
@@ -1431,7 +1433,7 @@
             $('#MarkAggregationAndGrouping_Status').html('Saving....');
             $('#loadingwholepage').hide(1000);
             //if (index !== -1) addition.splice(index, 1);
-            //debugger;
+           
             var index = addition.map(function (e) { return e.key; }).indexOf($('ul#sortable').find('li[isactive="1"]').attr('key'));
             if ($('#EnableGrouping').prop("checked") == true) {
                 $('ul#sortable').find('li[isactive="1"]').attr('grouping', '1');
@@ -1566,24 +1568,3 @@
 	</div>
 </body>
 </html>
-
-
-
-<%-- <html>
-
-<head>
-<title>First Web Application</title>
-</head>
-
-<body>
-	Welcome ${sign_no}!! <a href="/list-todos">Click here</a> to manage your todo's.
-	${user_id}
-	${user_name}
-	${department_level_name}
-	${department_id}
-	${designation_id}
-	${designation_name}
-	${hm}
-</body>
-
-</html> --%>

@@ -9,10 +9,13 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.StringJoiner;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -117,4 +120,34 @@ public class JsonUtils {
 		}
 		return list;
 	}
+	
+	public static String getWhereJoiner(String str) throws ParseException{
+		JSONParser parser = new JSONParser();
+		JSONObject array = (JSONObject) parser.parse(str);
+
+		org.json.simple.JSONArray objarray =  (org.json.simple.JSONArray) array.get("Where");
+
+		System.out.println(objarray);
+		StringJoiner joiner = new StringJoiner("&&");
+		for(Object o1 : objarray) {
+
+		System.out.println(o1);
+
+		JSONObject json = (JSONObject) o1;
+		String builer = " @."+json.get("ColumnId").toString() + json.get("Condition").toString()+json.get("Value").toString()+ " ";
+		System.out.println(builer);
+
+		joiner.add(builer);
+
+		System.out.println(joiner);
+		//joiner.add("@."+json.get("column")+ expression+ value+"));
+
+
+		}
+		String xyz = "[?("+joiner.toString().trim()+")]";
+
+		System.out.println(xyz);
+		return xyz;
+
+		}
 }
